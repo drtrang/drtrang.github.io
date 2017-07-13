@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.trang.space">
-  <title>Archives: 2017 | Trang&#39;s Blog</title>
+  <title>Guava 学习手册 | Trang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="后端开发一枚，擅长研究前沿技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Trang&#39;s Blog">
-<meta property="og:url" content="http://blog.trang.space/archives/2017/index.html">
+  <meta name="description" content="Guava是Google的一个开源项目，包含许多Google核心的Java常用库。 1. com.google.common.base1.1 字符串处理Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。 1.1.1 CharMatchercom.google.common.base.CharMatcher是Guava提供的用于进行字符匹配的工具类">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Guava 学习手册">
+<meta property="og:url" content="http://blog.trang.space/2017/07/13/Guava 学习手册/index.html">
 <meta property="og:site_name" content="Trang&#39;s Blog">
-<meta property="og:description" content="后端开发一枚，擅长研究前沿技术">
+<meta property="og:description" content="Guava是Google的一个开源项目，包含许多Google核心的Java常用库。 1. com.google.common.base1.1 字符串处理Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。 1.1.1 CharMatchercom.google.common.base.CharMatcher是Guava提供的用于进行字符匹配的工具类">
+<meta property="og:updated_time" content="2017-07-13T08:48:22.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trang&#39;s Blog">
-<meta name="twitter:description" content="后端开发一枚，擅长研究前沿技术">
+<meta name="twitter:title" content="Guava 学习手册">
+<meta name="twitter:description" content="Guava是Google的一个开源项目，包含许多Google核心的Java常用库。 1. com.google.common.base1.1 字符串处理Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。 1.1.1 CharMatchercom.google.common.base.CharMatcher是Guava提供的用于进行字符匹配的工具类">
   
     <link rel="alternative" href="/atom.xml" title="Trang&#39;s Blog" type="application/atom+xml">
   
@@ -152,36 +154,180 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Guava 学习手册" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/Guava 学习手册/" class="archive-article-date">
-  	<time datetime="2017-07-13T08:42:08.155Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/Guava 学习手册/">Guava 学习手册</a>
+    <h1 class="article-title" itemprop="name">
+      Guava 学习手册
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/13/Guava 学习手册/" class="archive-article-date">
+  	<time datetime="2017-07-13T08:42:08.155Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Guava是Google的一个开源项目，包含许多Google核心的Java常用库。</p>
+<h2 id="1-com-google-common-base"><a href="#1-com-google-common-base" class="headerlink" title="1. com.google.common.base"></a>1. com.google.common.base</h2><h3 id="1-1-字符串处理"><a href="#1-1-字符串处理" class="headerlink" title="1.1 字符串处理"></a>1.1 字符串处理</h3><p>Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。</p>
+<h4 id="1-1-1-CharMatcher"><a href="#1-1-1-CharMatcher" class="headerlink" title="1.1.1 CharMatcher"></a>1.1.1 CharMatcher</h4><p><code>com.google.common.base.CharMatcher</code>是Guava提供的用于进行字符匹配的工具类，翻开<code>CharMatcher</code>的源码，我们知道<code>CharMatcher</code>是一个抽象类，在其内部Guava做了大量默认实现，用来更方便的对字符串做匹配，并通过构造者模式对匹配后的字符串进行处理。</p>
+<p><em>注：不支持正则表达式</em></p>
+<h4 id="1-1-2-Joiner"><a href="#1-1-2-Joiner" class="headerlink" title="1.1.2 Joiner"></a>1.1.2 Joiner</h4><p><code>com.google.common.base.Joiner</code>用来拼接字符串，可以避免大量的手动拼接<code>appendTo()</code>方法，<code>Joiner</code>可以实现<code>Iterable&lt;?&gt;</code>、<code>Object[]</code>、<code>Map&lt;?, ?&gt;</code>类型的拼接。但要实现基本类型数组的拼接就无能为力了，这时就需要借助<code>com.google.common.base.primitives</code>包的基本类型工具类来实现了。</p>
+<p><code>Joiner</code>底层通过<code>StringBuilder</code>实现，非线程安全。</p>
+<h4 id="1-1-3-Splitter"><a href="#1-1-3-Splitter" class="headerlink" title="1.1.3 Splitter"></a>1.1.3 Splitter</h4><p><code>com.google.common.base.Splitter</code>用来分割字符串，可以方便的以任意字符分割字符串，并提供转换为<code>Map</code>的方法<code>MapSplitter withKeyValueSeparator(String separator)</code>。</p>
+<p><em>注：支持正则表达式分割字符串。</em></p>
+<h4 id="1-1-4-Strings"><a href="#1-1-4-Strings" class="headerlink" title="1.1.4 Strings"></a>1.1.4 Strings</h4><p><code>com.google.common.base.Strings</code>的功能较少，Guava提供的其它几个工具类已基本可以实现字符串处理的相关功能。</p>
+<h4 id="1-1-5-Charsets"><a href="#1-1-5-Charsets" class="headerlink" title="1.1.5 Charsets"></a>1.1.5 Charsets</h4><p>字符串编码一直是我们很头疼的事情，相信我们都写过这样一行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String s = &quot;trang&quot;;</div><div class="line">byte[] bytes = s.getBytes(Charset.forName(&quot;UTF8&quot;));</div></pre></td></tr></table></figure></p>
+<p>这样写有很多缺点，首先我们的大脑得记住常用的字符串编码，不是<code>UTF_8</code>，不是<code>UTF+8</code>，只能是<code>UTF-8</code>或者<code>UTF8</code>，其次错误输入后的后果也很严重，JVM会抛出<code>java.nio.charset.UnsupportedCharsetException</code>异常。</p>
+<p><code>com.google.common.base.Charsets</code>给我们提供了一种便利的方式，<code>Charsets</code>类提供了常见的<code>Charset</code>编码集，给我们的大脑腾出了位置并且避免了异常。</p>
+<p><em>注：Java7中提供了类似功能的<code>java.nio.charset.StandardCharsets</code>类</em></p>
+<h4 id="1-1-6-CaseFormat"><a href="#1-1-6-CaseFormat" class="headerlink" title="1.1.6 CaseFormat"></a>1.1.6 CaseFormat</h4><p><code>com.google.common.base.CaseFormat</code>很机智的替我们解决的大小写转换的问题，并且提供了额外的内容。</p>
+<p>在处理数据库与POJO的映射时，该类有奇效。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LOWER_CAMEL</td>
+<td style="text-align:left">小写驼峰</td>
+<td style="text-align:left">lowerCamel</td>
+</tr>
+<tr>
+<td style="text-align:left">LOWER_HYPHEN</td>
+<td style="text-align:left">小写连接符</td>
+<td style="text-align:left">lower-hyphen</td>
+</tr>
+<tr>
+<td style="text-align:left">LOWER_UNDERSCORE</td>
+<td style="text-align:left">小写下划线</td>
+<td style="text-align:left">lower_underscore</td>
+</tr>
+<tr>
+<td style="text-align:left">UPPER_CAMEL</td>
+<td style="text-align:left">大写驼峰</td>
+<td style="text-align:left">UpperCamel</td>
+</tr>
+<tr>
+<td style="text-align:left">UPPER_UNDERSCORE</td>
+<td style="text-align:left">大写下划线</td>
+<td style="text-align:left">UPPER_UNDERSCORE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-2-函数式编程"><a href="#1-2-函数式编程" class="headerlink" title="1.2 函数式编程"></a><span id="function">1.2 函数式编程</span></h3><p>在Java8面世之前，Guava一直是函数式编程的不二之选，但<strong>过度使用Guava函数式编程会导致冗长、混乱、可读性差而且低效的代码</strong>。这是迄今为止最容易（也是最经常）被滥用的部分，如果你想通过函数式风格达成一行代码，致使这行代码长到荒唐，Guava团队会泪流满面。</p>
+<p><code>Predicate</code>和<code>Function</code>是函数式编程中最重要的两个接口，通常通过匿名内部类的方式实现自己的函数，也可以通过对应的工具类使用Guava已为你写好的函数。</p>
+<h4 id="1-2-1-Predicate"><a href="#1-2-1-Predicate" class="headerlink" title="1.2.1 Predicate"></a>1.2.1 Predicate</h4><p><code>com.google.common.base.Predicate&lt;T&gt;</code>，断言预期结果，如果与预期不符则放弃。<code>Predicate</code>只声明了一个方法<code>boolean apply(T input)</code>，使用时只需要实现断言表达式即可。</p>
+<p><code>CharMatcher</code>和<code>Range</code>也是通过<code>Predicate</code>实现的。</p>
+<p>常见使用Predicate的方法：</p>
+<pre><code>Iterables.filter(Iterable&lt;T&gt; unfiltered, Predicate&lt;? super T&gt; predicate)
+FluentIterable.filter(Predicate&lt;? super T&gt; predicate)
+Collections2.filter(Collection&lt;E&gt; unfiltered, Predicate&lt;? super E&gt; predicate)
+Sets.filter(Set&lt;T&gt;, Predicate&lt;? super T&gt;)
+Maps.filterKeys(Map&lt;K, V&gt; unfiltered, Predicate&lt;? super K&gt; keyPredicate)
+Maps.filterValues(Map&lt;K, V&gt; unfiltered, Predicate&lt;? super V&gt; valuePredicate)
+Maps.filterEntries(Map&lt;K, V&gt; unfiltered, Predicate&lt;? super Entry&lt;K, V&gt;&gt; entryPredicate)
+Multimaps.filter(Predicate&lt;? super E&gt; predicate)
+</code></pre><h4 id="1-2-2-Function"><a href="#1-2-2-Function" class="headerlink" title="1.2.2 Function"></a>1.2.2 Function</h4><p><code>com.google.common.base.Function&lt;F, T&gt;</code>，函数，<code>Function</code>最常用的功能是转换集合，同样只需要实现<code>T apply(F input)</code>即可愉快的玩耍了。</p>
+<p>常见使用Function的方法：</p>
+<pre><code>与`Predicate`基本一致
+</code></pre><h4 id="1-2-3-Supplier"><a href="#1-2-3-Supplier" class="headerlink" title="1.2.3 Supplier"></a>1.2.3 Supplier</h4><p><code>com.google.common.base.Supplier&lt;T&gt;</code>可以对传入的对象进行包装构建后再输出。与前两个函数接口一样，<code>Supplier</code>只提供了一个供实现的方法<code>T get()</code>，用于获取包装后的对象。由于<code>Supplier</code>在对象的外层，所以<code>Supplier</code>的一个重要作用是赋予对象懒加载的特性。</p>
+<h3 id="1-3-其它工具类"><a href="#1-3-其它工具类" class="headerlink" title="1.3 其它工具类"></a>1.3 其它工具类</h3><h4 id="1-3-1-Optional"><a href="#1-3-1-Optional" class="headerlink" title="1.3.1 Optional"></a>1.3.1 Optional</h4><p>Guava用<code>com.google.common.base.Optional</code>表示可能为<code>null</code>的<code>T</code>类型引用。一个<code>Optional</code>实例可能包含非<code>null</code>的引用（我们称之为引用存在），也可能什么也不包括（称之为引用缺失）。它从不说包含的是<code>null</code>值，而是用存在或缺失来表示。但<code>Optional</code>从不会包含<code>null</code>值引用。</p>
+<p><code>Optional</code>最大的优点在于它是一种傻瓜式的防护。<code>Optional</code>迫使你积极思考引用缺失的情况，因为你必须显式地从<code>Optional</code>获取引用。</p>
+<h4 id="1-3-2-Stopwatch"><a href="#1-3-2-Stopwatch" class="headerlink" title="1.3.2 Stopwatch"></a>1.3.2 Stopwatch</h4><p><code>com.google.common.base.Stopwatch</code>是一种灵活的代替<code>System.currentTimeMillis()</code>和<code>System.nanoTime()</code>的方式。</p>
+<p>你可以把<code>Stopwatch</code>想象成一个秒表，它支持暂停和重置，并且支持<code>java.util.concurrent.TimeUnit</code>的任何计时单位。</p>
+<h2 id="2-com-google-common-collect"><a href="#2-com-google-common-collect" class="headerlink" title="2. com.google.common.collect"></a>2. com.google.common.collect</h2><h3 id="2-1-拓展集合"><a href="#2-1-拓展集合" class="headerlink" title="2.1 拓展集合"></a>2.1 拓展集合</h3><p>Guava对Java默认的集合做了大量拓展，以实现不同的业务需求。</p>
+<h4 id="2-1-1-ImmutabelMap"><a href="#2-1-1-ImmutabelMap" class="headerlink" title="2.1.1 ImmutabelMap"></a>2.1.1 ImmutabelMap</h4><p>Guava的<code>Immutable</code>系列被很多人推崇，<code>Immutable</code>对象的数据在创建时提供，并且在整个生命周期内不可变，这样带来了一些好处：</p>
+<pre><code>1. 线程安全
+2. 节省空间，有效利用内存
+3. 可当做常量使用
+</code></pre><p>以前我们常使用<code>Collections.unmodifiableXxx()</code>来定义常量集合，但我们都知道它是有缺陷的。以后当我们使用常量集合时，推荐大家使用Guava的<code>Immutable集合</code>，Guava把所有集合类都建立了对应的不可变集合。</p>
+<p><strong>常见ImmutabelMap实现类：</strong><br>| 可变集合类型 | 来源 | Guava不可变集合<br>| :– | :– | :– |<br>| Collection | JDK | ImmutableCollection<br>| List | JDK | ImmutableList<br>| Set | JDK | ImmutableSet<br>| SortedSet | JDK | ImmutableSortedSet<br>| Map | JDK | ImmutableMap<br>| SortedMap | JDK | ImmutableSortedMap<br>| Multiset | Guava | ImmutableMultiset<br>| SortedMultiset | Guava | ImmutableSortedMultiset<br>| Multimap | Guava | ImmutableMultimap<br>| ListMultimap | Guava | ImmutableListMultimap<br>| SetMultimap | Guava | ImmutableSetMultimap<br>| BiMap | Guava | ImmutableBiMap<br>| ClassToInstanceMap | Guava | ImmutableClassToInstanceMap<br>| TypeToInstanceMap | Guava | ImmutableTypeToInstanceMap<br>| Table | Guava | ImmutableTable<br>| RangeSet | Guava | ImmutableRangeSet<br>| RangeMap | Guava | ImmutableRangeMap</p>
+<p><em>注：</em><br><em>1. 当进行<code>add</code>、<code>remove</code>等操作时抛出<code>java.lang.UnsupportedOperationException</code>，该异常为运行时异常，并不会在编译时提醒你，需要开发时注意</em><br><em>2. 所有<code>ImmutableMap</code>均不支持null值</em><br><em>3. 所有<code>ImmutableMap</code>均不支持插入相同的key</em></p>
+<h4 id="2-1-2-MultiSet"><a href="#2-1-2-MultiSet" class="headerlink" title="2.1.2 MultiSet"></a>2.1.2 MultiSet</h4><p><code>com.google.common.collect.Multiset&lt;E&gt;</code>和<code>Set</code>的区别是可以保存多个相同的对象。在JDK中，<code>List</code>和<code>Set</code>有一个基本的区别，就是List有序且可重复，而Set不能有重复，也不保证顺序（有些实现有顺序，例如<code>LinkedHashSet</code>和<code>SortedSet</code>等）所以<code>Multiset</code>占据了<code>List</code>和<code>Set</code>之间的一个灰色地带：允许重复，但不保证顺序。</p>
+<p>常见使用场景：<code>Multiset</code>有一个有用的功能，就是跟踪每种对象的数量，所以你可以用来进行数字统计。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HashMultiset.&lt;Integer&gt;create().count(element);</div></pre></td></tr></table></figure></p>
+<p><strong>常见MultiSet实现类：</strong><br>| Value类型 | 来源 | Gauva Multimap<br>| :– | :– | :– |<br>| Enum | JDK | EnumMultiset<br>| HashMap | JDK | HashSetMultiset<br>| LinkedHashMap | JDK | LinkedHashMultiset<br>| TreeMap | JDK | TreeMultiset<br>| ConcurrentHashMap | JDK | ConcurrentHashMultiset<br>| ImmutableMap | Guava | ImmutableMultiset</p>
+<h4 id="2-1-3-MultiMap"><a href="#2-1-3-MultiMap" class="headerlink" title="2.1.3 MultiMap"></a>2.1.3 MultiMap</h4><p>Guava中提供了形如<code>Map&lt;K, List&lt;V&gt;&gt;</code>或者<code>Map&lt;K, Set&lt;V&gt;&gt;</code>的新集合<code>com.google.common.collect.Multimap&lt;K, V&gt;</code>，方便的实现了把一个键对应到多个值的数据结构。</p>
+<p><strong>常见MultiMap实现类：</strong><br>| Value类型 | 来源 | Gauva Multimap<br>| :– | :– | :– |<br>| ArrayList | JDK | ArrayListMultimap<br>| LinkedList | JDK | LinkedListMultimap<br>| HashSet | JDK | HashMultimap<br>| LinkedHashSet | JDK | LinkedHashMultimap<br>| TreeSet | JDK | TreeMultimap<br>| ImmutableList | Guava | ImmutableListMultimap<br>| ImmutableSet | Guava | ImmutableSetMultimap</p>
+<p><em>注：</em><br><em>1. <code>MultiMap</code>并不是Map</em><br><em>2. 除了两个<code>ImmutableMap</code>，其它均支持null键和null值</em></p>
+<h4 id="2-1-4-BiMap"><a href="#2-1-4-BiMap" class="headerlink" title="2.1.4 BiMap"></a>2.1.4 BiMap</h4><p><code>com.google.common.collect.BiMap&lt;K, V&gt;</code>是一个双向Map，在<code>BiMap</code>中，键值都是唯一的。</p>
+<p><strong>常见BiMap实现类：</strong><br>| Value类型 | 来源 | Gauva Multimap<br>| :– | :– | :– |<br>| HashMap | JDK | HashBiMap<br>| EnumMap | JDK | EnumBiMap<br>| EnumMap | JDK | EnumHashBiMap<br>| ImmutableMap | Guava | ImmutableBiMap</p>
+<h4 id="2-1-5-Table"><a href="#2-1-5-Table" class="headerlink" title="2.1.5 Table"></a>2.1.5 Table</h4><p><code>com.google.common.collect.Table&lt;R, C, V&gt;</code>代替了形如<code>Map&lt;FirstName, Map&lt;LastName, Person&gt;&gt;</code>的集合，通过行和列来确定唯一的值。</p>
+<p><strong>常见Table实现类：</strong><br>| Value类型 | 来源 | Gauva Multimap<br>| :– | :– | :– |<br>| HashMap | JDK | HashBasedTable<br>| TreeMap | JDK | TreeBasedTable<br>| ImmutableMap | Guava | ImmutableTable<br>|      | Guava | ArrayTable</p>
+<h4 id="2-1-6-ClassToInstanceMap"><a href="#2-1-6-ClassToInstanceMap" class="headerlink" title="2.1.6 ClassToInstanceMap"></a>2.1.6 ClassToInstanceMap</h4><p><code>com.google.common.collect.ClassToInstanceMap&lt;B&gt;</code>是一种特殊的Map：它的键是类型，而值是符合键所指类型的对象。</p>
+<p>Guava提供了两种有用的<code>ClassToInstanceMap</code>实现：<code>com.google.common.collect.MutableClassToInstanceMap</code>和 <code>com.google.common.collect.ImmutableClassToInstanceMap</code>。</p>
+<p>为了扩展Map接口，<code>ClassToInstanceMap</code>额外声明了两个方法：<code>T getInstance(Class&lt;T&gt;)</code> 和<code>T putInstance(Class&lt;T&gt;, T)</code>，从而避免强制类型转换，同时保证了类型安全。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ClassToInstanceMap&lt;Object&gt; map = MutableClassToInstanceMap.create();</div><div class="line">map.putInstance(Integer.class, 0);</div><div class="line">map.putInstance(String.class, &quot;1&quot;);</div></pre></td></tr></table></figure>
+<p><em>注：通常泛型<b>为<code>java.lang.Object</code></b></em></p>
+<h4 id="2-1-7-Range"><a href="#2-1-7-Range" class="headerlink" title="2.1.7 Range"></a>2.1.7 Range</h4><p>@TODO<br><code>com.google.common.collect.Range&lt;C extends Comparable&gt;</code><br><code>com.google.common.collect.RangeSet&lt;C extends Comparable&gt;</code><br><code>com.google.common.collect.RangeMap&lt;K extends Comparable, V&gt;</code></p>
+<h3 id="2-2-集合工具类"><a href="#2-2-集合工具类" class="headerlink" title="2.2 集合工具类"></a>2.2 集合工具类</h3><p>Guava对JDK内置和Guava拓展的集合均开发了工具类，分别为<code>Collections2</code>、<code>Iterables</code>、<code>Lists</code>、<code>Sets</code>、<code>Maps</code>、<code>Queues</code>、<code>Multisets</code>、<code>Multimaps</code>、<code>Tables</code>，里面囊括了异常强大的静态工具方法。</p>
+<p><em>Guava对拓展的具体集合实现类没有提供基于工具类的初始化方法，而是直接在集合类中提供了静态工厂方法。</em></p>
+<h4 id="2-2-1-Collections2"><a href="#2-2-1-Collections2" class="headerlink" title="2.2.1 Collections2"></a>2.2.1 Collections2</h4><p><code>com.google.common.collect.Collections2</code>提供的方法不多，最常用的方法是函数编程的两个方法，具体内容在 <a href="#function">1.2 函数式编程</a>：</p>
+<pre><code>Collection&lt;E&gt; filter(Collection&lt;E&gt; unfiltered, Predicate&lt;? super E&gt; predicate)
+Collection&lt;T&gt; transform(Collection&lt;F&gt; fromCollection, Function&lt;? super F, T&gt; function)
+</code></pre><h4 id="2-2-2-Iterables"><a href="#2-2-2-Iterables" class="headerlink" title="2.2.2 Iterables"></a>2.2.2 Iterables</h4><p><code>com.google.common.collect.Iterables</code>为所有实现<code>java.lang.Iterable&lt;T&gt;</code>接口的类提供了大量实用方法。如果你使用了<code>Iterator</code>，Guava同样为你提供了<code>Iterators</code>，它们的作用基本一致。</p>
+<p><code>Iterables</code>并不会傻瓜式的任何方法都会遍历对象，而是很精明的通过<code>instanceof</code>判断对象实际的类型，如果匹配上则调用该类型的方法，匹配不上才会遍历。</p>
+<p><em>注：建议用<code>Iterables</code>代替<code>Collections2</code></em></p>
+<h4 id="2-2-3-Lists"><a href="#2-2-3-Lists" class="headerlink" title="2.2.3 Lists"></a>2.2.3 Lists</h4><p><code>com.google.common.collect.Lists</code>提供了创建<code>List</code>的工厂方法，其余有用的有两个：</p>
+<pre><code>List&lt;List&lt;B&gt;&gt; cartesianProduct(List&lt;? extends List&lt;? extends B&gt;&gt; lists)
+List&lt;T&gt; reverse(List&lt;T&gt; list)
+</code></pre><p><code>Lists</code>没有函数编程的<code>filter()</code>方法，需要使用工厂方法代替实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Lists.newArrayList(Iterables.filter(from, Predicates.contains(Pattern.compile(&quot;[2-9]&quot;))));</div></pre></td></tr></table></figure></p>
+<h4 id="2-2-4-Sets"><a href="#2-2-4-Sets" class="headerlink" title="2.2.4 Sets"></a>2.2.4 Sets</h4><p>由于<code>Set</code>的不重复特性，我们常用<code>Set</code>实现一些算法，而<code>com.google.common.collect.Sets</code>贴合实际的满足了我们的要求，提供了交集、并集、差集等多种运算方式，并定义了视图<code>com.google.common.collect.Sets.SetView</code>来展示结果。</p>
+<pre><code>SetView&lt;E&gt; intersection(final Set&lt;E&gt; set1, final Set&lt;?&gt; set2)
+SetView&lt;E&gt; union(final Set&lt;? extends E&gt; set1, final Set&lt;? extends E&gt; set2)
+SetView&lt;E&gt; difference(final Set&lt;E&gt; set1, final Set&lt;?&gt; set2)
+SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Set&lt;? extends E&gt; set2)
+</code></pre><p><code>MultiSet</code>的工具类为<code>com.google.common.collect.MultiSet</code>。</p>
+<h4 id="2-2-5-Maps"><a href="#2-2-5-Maps" class="headerlink" title="2.2.5 Maps"></a>2.2.5 Maps</h4><p><code>com.google.common.collect.Maps</code>提供了<code>Map</code>、<code>SortedMap</code>、<code>BiMap</code>的工厂方法及工具，<code>Multimap</code>的工具类为<code>com.google.common.collect.Multimaps</code>。</p>
+<p><code>Maps</code>中比较常用的方法是<code>ImmutableMap&lt;K, V&gt; uniqueIndex(Iterable&lt;V&gt; values, Function&lt;? super V, K&gt; keyFunction)</code>。</p>
+<h3 id="2-3-比较器"><a href="#2-3-比较器" class="headerlink" title="2.3 比较器"></a>2.3 比较器</h3><h4 id="2-3-1-ComparisonChain"><a href="#2-3-1-ComparisonChain" class="headerlink" title="2.3.1 ComparisonChain"></a>2.3.1 ComparisonChain</h4><p>在Java中，我们实现排序往往有两种方式：</p>
+<pre><code>1. 要排序的对象实现`java.lang.Comparable&lt;T&gt;`接口，重写`compareTo(T o)`方法
+2. 定义排序对象，实现`java.util.Comparator&lt;T&gt;`接口，重写`compare(T o1, T o2)`方法
+</code></pre><p>重写比较方法是件麻烦的事情，Guava又一次帮我们逃离苦海，利用<code>com.google.common.collect.ComparisonChain</code>轻松愉快的完成比较方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public int compare(Cut cut1, Cut cut2) &#123;</div><div class="line">    // 按照Rorate -&gt; X -&gt; Y 排序</div><div class="line">    return ComparisonChain.start()</div><div class="line">              .compare(cut1.getRotate(), cut2.getRotate())</div><div class="line">              .compare(cut1.getX(), cut2.getX())</div><div class="line">              .compare(cut1.getY(), cut2.getY())</div><div class="line">              .result();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="2-3-2-Ordering"><a href="#2-3-2-Ordering" class="headerlink" title="2.3.2 Ordering"></a>2.3.2 Ordering</h4><p><code>ComparisonChain</code>带来的功能仍然比较单一，而Guava同时为我们提供了异常强大且方便的链式调用比较器<code>com.google.common.collect.Ordering&lt;T&gt;</code>，<code>Ordering</code>实现了<code>Comparator</code>接口，所以完全可以用<code>Ordering</code>替代<code>Comparator</code>。</p>
+<p><code>Ordering</code>提供了大量的默认实现，每个比较器都提供了常见的链式调用方法，大家可以根据实际情况创建自己的比较器。</p>
+<p><em>注：</em><br><em>1. 基本类型的比较可以使用<code>com.google.common.base.primitives</code>包</em><br><em>2. Java8中提供了类似功能的<code>java.util.Comparators</code>类</em></p>
+<h2 id="3-com-google-common-cache"><a href="#3-com-google-common-cache" class="headerlink" title="3. com.google.common.cache"></a>3. com.google.common.cache</h2><p>缓存是一个成熟的系统中必不可少的一环，合理利用缓存可以显著提升系统响应速度，减少I/O压力，Java常见的缓存有<code>Redis</code>、<code>Memcached</code>、<code>EhCache</code>等，而今天我们介绍的是Guava提供的本地缓存<code>Guava Cache</code>。</p>
+<p><code>Guava Cache</code>在很多场景下都是相当有用的，比如初始化查找树，我们只需要对不同的树初始化一次，以后直接调用即可。</p>
+<p><code>Guava Cache</code>与<code>ConcurrentMap</code>很相似，但不完全一样。最基本的区别是<code>ConcurrentMap</code>会一直保存所有添加的元素，直到显式地移除。相对地，<code>Guava Cache</code>为了限制内存占用，通常都设定为自动回收元素。</p>
+<h3 id="3-1-应用缓存"><a href="#3-1-应用缓存" class="headerlink" title="3.1 应用缓存"></a>3.1 应用缓存</h3><h4 id="3-1-1-Cache"><a href="#3-1-1-Cache" class="headerlink" title="3.1.1 Cache"></a>3.1.1 Cache</h4><p><code>com.google.common.cache.Cache&lt;K, V&gt;</code>是<code>Guava Cache</code>的基本接口，Guava为我们提供了一个默认实现<code>LocalManualCache</code>，我们可以通过<code>CacheBuilder</code>工具类的工厂方法来创建<code>LocalManualCache</code>对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CacheBuilder.newBuilder().build()</div></pre></td></tr></table></figure>
+<h4 id="3-1-2-CacheLoader"><a href="#3-1-2-CacheLoader" class="headerlink" title="3.1.2 CacheLoader"></a>3.1.2 CacheLoader</h4><p>在使用<code>Guava Cache</code>前，首先问自己一个问题：有没有合理的默认方法来加载与键关联的值？如果没有，<code>Cache</code>就是为你打造的，你需要在获取缓存的值时传入一个<code>Callable</code>实例来保证<code>Guava Cache</code>的作用。如果有，那么<code>CacheLoader</code>更适合你，而这也是今天的重点。</p>
+<p><code>com.google.common.cache.LoadingCache&lt;K, V&gt;</code>是实现了<code>CacheLoader</code>的<code>Guava Cache</code>，与创建<code>Cache</code>实例时仅有一点不同，只需要调用<code>build()</code>的重载方法即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CacheBuilder.newBuilder().build(cacheLoader);</div></pre></td></tr></table></figure>
+<p>正因为<code>LoadingCache</code>有了默认的加载方法，所以只需要调用<code>get(K key)</code>即可得到值。</p>
+<h3 id="3-2-自定义缓存"><a href="#3-2-自定义缓存" class="headerlink" title="3.2 自定义缓存"></a>3.2 自定义缓存</h3><h4 id="3-2-1-CacheBuilder"><a href="#3-2-1-CacheBuilder" class="headerlink" title="3.2.1 CacheBuilder"></a>3.2.1 CacheBuilder</h4><p>从之前的代码中大家都看到了，<code>Guava Cache</code>的实例正是通过<code>CacheBuilder</code>创建的，事实上，<code>CacheBuilder</code>的作用远远不止这些，掌握好<code>CacheBuilder</code>，享受自定义<code>Guava Cache</code>的乐趣吧。</p>
+<p><strong>自定义CacheBuilder参数：</strong><br>| 方法 | 参数 | 说明<br>| :– | :– | :– |<br>| initialCapacity | int | 初始化容量<br>| maximumSize | long | 最大容量<br>| weigher | Weigher | 权重函数<br>| maximumWeight | long | 最大权重<br>| concurrencyLevel | int | 并发级别<br>| expireAfterAccess | long, TimeUnit | 上次访问给定时间后回收<br>| expireAfterWrite | long, TimeUnit | 缓存写入给定时间后回收<br>| refreshAfterWrite | long, TimeUnit | 缓存写入给定时间后更新<br>| removalListener | RemovalListener | 移除监听器(同步)<br>| recordStats |  | 统计状态</p>
+<p><code>CacheBuilder</code>提供了一系列的参数供我们个性化，主要是为了缓存的回收。<code>CacheBuilder</code>创建的实例并不会自动清理失效的缓存，而是在你进行读或写操作的时候顺带维护。这样做的原因在于，如果要自动地持续清理缓存，就必须有一个线程，这个线程会和用户操作竞争共享锁。</p>
+<h2 id="4-com-google-common-net"><a href="#4-com-google-common-net" class="headerlink" title="4. com.google.common.net"></a>4. com.google.common.net</h2><p><strong>常用类</strong><br><strong>@Beta:</strong> <code>HostAndPort</code> <code>HostSpecifier</code> <code>InetAddresses</code> <code>InternetDomainName</code> <code>MediaType</code> <code>PercentEscaper</code> <code>UrlEscapers</code></p>
+<p><strong>@Release:</strong> <code>HttpHeaders</code><br>Guava中的<code>com.google.common.net</code>包目前提供的功能较少，而且大多类都标注了@Beta的注解，在Guava中标记@Beta表示这个类还不稳定，有可能在以后的版本中变化，或者去掉，所以不建议大量使用，这里也是只做简单的介绍。</p>
+<h3 id="4-1-HttpHeaders"><a href="#4-1-HttpHeaders" class="headerlink" title="4.1 HttpHeaders"></a>4.1 HttpHeaders</h3><p>先介绍下唯一一个没有@Beta注解的类<code>HttpHeaders</code>，这个类中并没有实质的方法，只是定义了一些Http头名称的常量，通常如果需要我们会自己定义这些常量，如果你引用了Guava包，那么就不再建议我们自己定义这些头名称的常量了，直接用它定义的即可。</p>
+<p>这里面应该有几乎所有的Http头名称，例如：<code>X_FORWARDED_FOR</code>，<code>CONTENT_TYPE</code>，<code>ACCEPT</code>等，用法也没有必要介绍了，直接引用常量就可以了。</p>
+<h3 id="4-2-HostAndPort"><a href="#4-2-HostAndPort" class="headerlink" title="4.2 HostAndPort"></a>4.2 HostAndPort</h3><p>有时候我们需要得到请求的ip，这时候通畅需要自己写方法解析url。而Guava给我们提供的<code>HostAndPort</code>类正是做这种事情的利器，可以从字符串中得到ip和port<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HostAndPort.fromString(String hostPortString)</div></pre></td></tr></table></figure></p>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ol>
+<li><a href="http://google.github.io/guava/releases/snapshot/api/docs/" target="_blank" rel="external">Guava API</a></li>
+<li><a href="http://ajoo.iteye.com/category/119082" target="_blank" rel="external">瓜娃系列</a></li>
+<li><a href="http://ifeve.com/google-guava/" target="_blank" rel="external">Guava官方文档</a></li>
+<li><a href="http://www.yiibai.com/guava/" target="_blank" rel="external">Guava教程</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,57 +339,117 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.trang.space/2017/07/13/Guava 学习手册/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/Druid Spring Boot Starter/" class="archive-article-date">
-  	<time datetime="2017-07-13T07:50:43.154Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/13/Druid Spring Boot Starter/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Druid Spring Boot Starter</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/Druid Spring Boot Starter/">Druid Spring Boot Starter</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-com-google-common-base"><span class="toc-number">1.</span> <span class="toc-text">1. com.google.common.base</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-字符串处理"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 字符串处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-CharMatcher"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 CharMatcher</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-Joiner"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 Joiner</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3-Splitter"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 Splitter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-4-Strings"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.1.4 Strings</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-5-Charsets"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.1.5 Charsets</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-6-CaseFormat"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.1.6 CaseFormat</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-函数式编程"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 函数式编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-Predicate"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 Predicate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-Function"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 Function</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-3-Supplier"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 Supplier</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-其它工具类"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 其它工具类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-Optional"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Optional</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-Stopwatch"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Stopwatch</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-com-google-common-collect"><span class="toc-number">2.</span> <span class="toc-text">2. com.google.common.collect</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-拓展集合"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 拓展集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-ImmutabelMap"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 ImmutabelMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-MultiSet"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 MultiSet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-MultiMap"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.1.3 MultiMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-BiMap"><span class="toc-number">2.1.4.</span> <span class="toc-text">2.1.4 BiMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-5-Table"><span class="toc-number">2.1.5.</span> <span class="toc-text">2.1.5 Table</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-6-ClassToInstanceMap"><span class="toc-number">2.1.6.</span> <span class="toc-text">2.1.6 ClassToInstanceMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-7-Range"><span class="toc-number">2.1.7.</span> <span class="toc-text">2.1.7 Range</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-集合工具类"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 集合工具类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-Collections2"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 Collections2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-Iterables"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 Iterables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-Lists"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 Lists</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-Sets"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.2.4 Sets</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-5-Maps"><span class="toc-number">2.2.5.</span> <span class="toc-text">2.2.5 Maps</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-比较器"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 比较器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-ComparisonChain"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 ComparisonChain</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-Ordering"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Ordering</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-com-google-common-cache"><span class="toc-number">3.</span> <span class="toc-text">3. com.google.common.cache</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-应用缓存"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 应用缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-Cache"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 Cache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-CacheLoader"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 CacheLoader</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-自定义缓存"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 自定义缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-CacheBuilder"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 CacheBuilder</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-com-google-common-net"><span class="toc-number">4.</span> <span class="toc-text">4. com.google.common.net</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-HttpHeaders"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 HttpHeaders</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-HostAndPort"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 HostAndPort</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料："><span class="toc-number">5.</span> <span class="toc-text">参考资料：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -266,8 +472,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
