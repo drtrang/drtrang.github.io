@@ -78,12 +78,10 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="springboot," />
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Trang's Blog" type="application/atom+xml" />
@@ -98,13 +96,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Trang&#39;s Blog">
-<meta property="og:url" content="http://blog.trang.space/404.html">
+<meta name="description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
+<meta name="keywords" content="springboot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot 的 Maven 项目原型">
+<meta property="og:url" content="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/index.html">
 <meta property="og:site_name" content="Trang&#39;s Blog">
-<meta property="og:updated_time" content="2017-07-14T08:29:07.371Z">
+<meta property="og:description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
+<meta property="og:updated_time" content="2017-08-10T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trang&#39;s Blog">
+<meta name="twitter:title" content="Spring Boot 的 Maven 项目原型">
+<meta name="twitter:description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
 
 
 
@@ -133,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.trang.space/404.html"/>
+  <link rel="canonical" href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/"/>
 
 
 
 
 
-  <title> | Trang's Blog</title>
+  <title>Spring Boot 的 Maven 项目原型 | Trang's Blog</title>
   
 
 
@@ -298,49 +300,190 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Trang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trang's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all">
-  <meta name="robots" content="index,follow">
-  <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css">
-</head>
-<body>
-  <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页">
-  </script>
-  <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
-  <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script>
-</body>
-</html>
-
+          <h1 class="post-title" itemprop="name headline">Spring Boot 的 Maven 项目原型</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T00:00:00+08:00">
+                2017-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>随着微服务的流行，Spring Boot 在广大开发者中占据了越来越重要的位置，其开箱即用、自动配置的特性也给我们带来了诸多便利。</p>
+<p>然而 Spring Boot 只是一个基础框架，我们还是需要新建工程、技术选型、参数配置等一系列步骤才能搭建出一个完整的项目，繁冗又无趣，尤其对于初学者来说，这一过程还可能会出现各种各样莫名其妙的问题。</p>
+<p><a href="https://github.com/drtrang/maven-archetype-springboot" target="_blank" rel="external">Spring Boot Archetype</a> 则是为了解决上述痛点而打造，借助 <code>maven-archetype-plugin</code> 插件，预置了日志、缓存、AOP、数据访问、代码生成、文档生成等模块，并提供常见技术的最佳实践，用户只需几秒即可快速构建一个可运行的 Spring Boot 项目。</p>
+<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p>主页：<a href="https://github.com/drtrang/maven-archetype-springboot" target="_blank" rel="external">https://github.com/drtrang/maven-archetype-springboot</a><br>问题：<a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="external">https://github.com/drtrang/maven-archetype-springboot/issues</a><br>后续计划：<a href="https://github.com/drtrang/maven-archetype-springboot/blob/master/TODO.md" target="_blank" rel="external">https://github.com/drtrang/maven-archetype-springboot/blob/master/TODO.md</a></p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>基于 Spring Boot 1.5.6，内嵌 Jetty</li>
+<li>增加全局异常捕获、view to json 等功能</li>
+<li>集成通用 Mapper 和 PageHelper，提供 BaseService，常用 CRUD 无需编写代码</li>
+<li>集成 MyBatis Generator，提供自定义插件，如自动生成 Service 插件、Model 类支持 Lombok 插件等等</li>
+<li>集成 Druid Spring Boot Starter，无需显式声明数据源（支持多数据源）</li>
+<li>集成 Swagger2，HTTP 接口自动生成接口文档</li>
+<li>提供常用工具，如 SpringContextHolder、SqlMapper</li>
+</ul>
+<h2 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h2><p>项目刚刚发布，许多方面还有不足，希望大家多提意见，有任何想法都可以提 <a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="external">Issue</a>，争取让 Spring Boot Archetype 成为我们工作中的最佳助力。</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/springboot/" rel="tag"># springboot</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/13/Druid Spring Boot Starter/" rel="next" title="Druid Spring Boot Starter">
+                <i class="fa fa-chevron-left"></i> Druid Spring Boot Starter
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -373,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -489,6 +641,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要"><span class="nav-number">1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址"><span class="nav-number">2.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Issue"><span class="nav-number">4.</span> <span class="nav-text">Issue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">5.</span> <span class="nav-text">About Me</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -608,10 +776,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

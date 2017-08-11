@@ -10,6 +10,7 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -74,7 +75,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="tools," />
@@ -88,7 +89,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -114,8 +115,9 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -155,12 +157,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
-
-
-
-
-
-
 
 
 
@@ -311,7 +307,11 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2016/06/17/Copiers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -396,6 +396,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -411,30 +414,19 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//拷贝对象，创建新对象，使用EasyMapper</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = Copiers.create(User.class, UserEntity.class).copy(user);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，传入目标对象</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.create(User.class, UserEntity.class).copy(user, entity);</div><div class="line"></div><div class="line"><span class="comment">//拷贝List</span></div><div class="line">User user1 = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">User user2 = User.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">List&lt;User&gt; users = ImmutableList.of(user1, user2);</div><div class="line">List&lt;UserEntity&gt; entities = Copiers.create(User.class, UserEntity.class).map(users);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，使用cglib，会拷贝null值</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="keyword">null</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.createCglib(User.class, UserEntity.class).copy(user, entity);</div></pre></td></tr></table></figure>
 <h3 id="复杂拷贝"><a href="#复杂拷贝" class="headerlink" title="复杂拷贝"></a>复杂拷贝</h3><p>若简单拷贝不满足业务需求，可以通过 <code>Copiers.createMapper()</code> 自定义映射关系，基于 EasyMapper 的特性实现，支持级联拷贝。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将源对象的name字段映射到目标对象的username字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).field(<span class="string">"name"</span>, <span class="string">"username"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//排除拷贝字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>, <span class="string">"sex"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//强制拷贝值为null的字段，默认不拷贝</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>).isNull(<span class="keyword">true</span>).register();</div></pre></td></tr></table></figure>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2>
-      
-    </div>
-
-    <div>
-      
-        
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -470,6 +462,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -540,7 +536,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -587,7 +583,9 @@
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
@@ -596,7 +594,9 @@
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  知乎
+                    
+                      知乎
+                    
                 </a>
               </span>
             
@@ -605,16 +605,20 @@
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
-                  QQ
+                    
+                      QQ
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="mailto:donghao.l@hotmail.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-fw fa-envelope-o"></i>
+                    <i class="fa fa-fw fa-envelope"></i>
                   
-                  Email
+                    
+                      Email
+                    
                 </a>
               </span>
             
@@ -687,6 +691,12 @@
 
         
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -751,25 +761,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
