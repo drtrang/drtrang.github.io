@@ -152,7 +152,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?d9aa0a9355831b449d76e6fee02de824";
+      hm.src = "https://hm.baidu.com/hm.js?902a46a1785e4edde6f4fe3c05d320ec";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -387,7 +387,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -424,13 +424,13 @@
 <li>基于 Spring Boot 1.5.6，内嵌 Jetty</li>
 <li>增加全局异常捕获、view to json 等功能</li>
 <li>集成通用 Mapper 和 PageHelper，提供 BaseService，常用 CRUD 无需编写代码</li>
-<li>集成 MyBatis Generator，提供自定义插件，如自动生成 Service 插件、Model 类支持 Lombok 插件等等</li>
-<li>集成 Druid Spring Boot Starter，无需显式声明数据源（支持多数据源）</li>
+<li>集成 MyBatis Generator，提供 <a href="https://github.com/drtrang/mybatis-generator-extension" target="_blank" rel="external">MBG Plugin Extension</a>，如自动生成 Service 插件、支持 Lombok 插件等等</li>
+<li>集成 <a href="https://github.com/drtrang/druid-spring-boot" target="_blank" rel="external">Druid Spring Boot Starter</a>，无需显式声明数据源（支持多数据源）</li>
 <li>集成 Swagger2，HTTP 接口自动生成接口文档</li>
 <li>提供常用工具，如 SpringContextHolder、SqlMapper</li>
 </ul>
-<h2 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h2><p>项目刚刚发布，许多方面还有不足，希望大家多提意见，有任何想法都可以提 <a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="external">Issue</a>，争取让 Spring Boot Archetype 成为我们工作中的最佳助力。</p>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+<h2 id="ISSUE"><a href="#ISSUE" class="headerlink" title="ISSUE"></a>ISSUE</h2><p>项目刚刚发布，许多方面还有不足，希望大家多提意见，如果有任何想法和讨论，都可以放到 <a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="external">ISSUE</a> 平台，我会及时回复。有条件的用户还可以提 PR，成为该项目的 Contributor。</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 
       
     </div>
@@ -662,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要"><span class="nav-number">1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址"><span class="nav-number">2.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Issue"><span class="nav-number">4.</span> <span class="nav-text">Issue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">5.</span> <span class="nav-text">About Me</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要"><span class="nav-number">1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址"><span class="nav-number">2.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ISSUE"><span class="nav-number">4.</span> <span class="nav-text">ISSUE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">5.</span> <span class="nav-text">About Me</span></a></li></ol></div>
             
 
           </div>
@@ -684,25 +684,29 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2017 - 2018 - 
+  &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Trang</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    主题 &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Mist
+    </a>
+  </div>
 
 
         
@@ -820,6 +824,8 @@
 
 
   
+
+
 
 
 
