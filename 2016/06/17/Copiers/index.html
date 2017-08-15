@@ -17,10 +17,6 @@
 
 
 
-  
-  
-  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
-
 
 
 
@@ -75,7 +71,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,7 +84,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools," />
+  <meta name="keywords" content="Tools," />
 
 
 
@@ -107,7 +103,7 @@
 
 
 <meta name="description" content="Copiers 是一个优雅的 Bean 拷贝工具">
-<meta name="keywords" content="tools">
+<meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Copiers">
 <meta property="og:url" content="http://blog.trang.space/2016/06/17/Copiers/index.html">
@@ -130,15 +126,15 @@
     tabs: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -236,12 +232,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            标签
+            分类
           </a>
         </li>
       
@@ -327,7 +323,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -420,13 +416,13 @@
     
     
     
-    <div class="post-body han-init-context" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Copiers 是一个优雅的 Bean 拷贝工具，基于不同底层实现的二次封装。<br>Copiers 隐藏了底层实现，仅暴露统一的 Api 来完成 Copy 过程，用户可随时通过工厂方法切换底层的拷贝方式。</p>
+        <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Copiers 是一个优雅的 Bean 拷贝工具，基于不同底层实现的二次封装。<br>Copiers 隐藏了底层实现，仅暴露统一的 Api 来完成 Copy 过程，用户可随时通过工厂方法切换底层的拷贝方式。</p>
 <h2 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h2><p>Copiers 目前有两种底层实现：<code>Cglib</code> &amp; <code>EasyMapper</code>，两种方式差明显，可根据实际情况任选其一或二者结合使用。</p>
 <h3 id="Cglib"><a href="#Cglib" class="headerlink" title="Cglib"></a>Cglib</h3><p>Cglib 中的 BeanCopier 是目前性能最好的拷贝方式，基于 ASM 字节码增强技术，千万次拷贝仅在 <em>1s</em> 以内，但高性能带来的显著缺点是功能单一、拓展性差，BeanCopier 仅支持源对象到目标对象的完全拷贝，不支持自定义映射，Convert 拓展也只能对拷贝的 value 做处理，很多情况下不满足实际的业务需求。</p>
 <h3 id="EasyMapper"><a href="#EasyMapper" class="headerlink" title="EasyMapper"></a>EasyMapper</h3><p><a href="https://github.com/neoremind/easy-mapper" target="_blank" rel="external">EasyMapper</a> 基于 Javassist 的字节码技术，千万次拷贝在 <em>4s</em> 左右。虽不如 BeanCopier，但大幅领先 Apache Commons BeanUtils、Dozer 等其它拷贝方式。且 EasyMapper 的优点在于使用灵活、扩展性强，具体情况可以查看 EasyMapper 的 Github， 地址：<a href="https://github.com/neoremind/easy-mapper" target="_blank" rel="external">https://github.com/neoremind/easy-mapper</a></p>
@@ -435,7 +431,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//拷贝对象，创建新对象，使用EasyMapper</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = Copiers.create(User.class, UserEntity.class).copy(user);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，传入目标对象</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.create(User.class, UserEntity.class).copy(user, entity);</div><div class="line"></div><div class="line"><span class="comment">//拷贝List</span></div><div class="line">User user1 = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">User user2 = User.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">List&lt;User&gt; users = ImmutableList.of(user1, user2);</div><div class="line">List&lt;UserEntity&gt; entities = Copiers.create(User.class, UserEntity.class).map(users);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，使用cglib，会拷贝null值</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="keyword">null</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.createCglib(User.class, UserEntity.class).copy(user, entity);</div></pre></td></tr></table></figure>
 <h3 id="复杂拷贝"><a href="#复杂拷贝" class="headerlink" title="复杂拷贝"></a>复杂拷贝</h3><p>若简单拷贝不满足业务需求，可以通过 <code>Copiers.createMapper()</code> 自定义映射关系，基于 EasyMapper 的特性实现，支持级联拷贝。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将源对象的name字段映射到目标对象的username字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).field(<span class="string">"name"</span>, <span class="string">"username"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//排除拷贝字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>, <span class="string">"sex"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//强制拷贝值为null的字段，默认不拷贝</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>).isNull(<span class="keyword">true</span>).register();</div></pre></td></tr></table></figure>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 
       
     </div>
@@ -446,7 +442,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.png" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
     <div>订阅我的微信公众号，文章同步更新</div>
 </div>
 
@@ -456,12 +452,30 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Trang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://blog.trang.space/2016/06/17/Copiers/" title="Copiers">http://blog.trang.space/2016/06/17/Copiers/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag"># tools</a>
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
           
         </div>
       
@@ -500,12 +514,6 @@
 
 
     <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -555,7 +563,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
+               src="/images/avatar.jpg"
                alt="Trang" />
           <p class="site-author-name" itemprop="name">Trang</p>
            
@@ -578,7 +586,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -703,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底层实现"><span class="nav-number">2.</span> <span class="nav-text">底层实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cglib"><span class="nav-number">2.1.</span> <span class="nav-text">Cglib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EasyMapper"><span class="nav-number">2.2.</span> <span class="nav-text">EasyMapper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单拷贝"><span class="nav-number">3.1.</span> <span class="nav-text">简单拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂拷贝"><span class="nav-number">3.2.</span> <span class="nav-text">复杂拷贝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">4.</span> <span class="nav-text">About Me</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要"><span class="nav-number">1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底层实现"><span class="nav-number">2.</span> <span class="nav-text">底层实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cglib"><span class="nav-number">2.1.</span> <span class="nav-text">Cglib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EasyMapper"><span class="nav-number">2.2.</span> <span class="nav-text">EasyMapper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单拷贝"><span class="nav-number">3.1.</span> <span class="nav-text">简单拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂拷贝"><span class="nav-number">3.2.</span> <span class="nav-text">复杂拷贝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">4.</span> <span class="nav-text">About Me</span></a></li></ol></div>
             
 
           </div>
@@ -1349,9 +1357,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
-
 
   
 

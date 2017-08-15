@@ -45,10 +45,10 @@
     
     </summary>
     
-      <category term="SpringBoot" scheme="http://blog.trang.space/categories/SpringBoot/"/>
+      <category term="最佳实践" scheme="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     
     
-      <category term="springboot" scheme="http://blog.trang.space/tags/springboot/"/>
+      <category term="Spring Boot" scheme="http://blog.trang.space/tags/Spring-Boot/"/>
     
   </entry>
   
@@ -59,8 +59,7 @@
     <published>2017-07-12T16:00:00.000Z</published>
     <updated>2017-07-12T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/drtrang/druid-spring-boot" target="_blank" rel="external">Druid Spring Boot Starter</a> 将帮助你在 Spring Boot 中使用 Druid。</p>
-<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="NEW"><a href="#NEW" class="headerlink" title="NEW !"></a>NEW !</h2><ol>
 <li>新增 ConfigFilter 的自动配置，替换 Druid 默认的 <code>connectionProperties</code> 方式</li>
 <li>完美支持多数据源 <a href="https://github.com/drtrang/druid-spring-boot/issues/2" target="_blank" rel="external">ISSUE #2</a></li>
@@ -81,8 +80,8 @@
 <p>参数枚举值：<br><img src="https://user-images.githubusercontent.com/13851701/28148904-3bb9b07a-67bc-11e7-9912-c7043c2d7de7.png" alt="db-type"></p>
 <h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><a href="https://github.com/drtrang/druid-spring-boot/tree/master/druid-spring-boot-samples" target="_blank" rel="external">druid-spring-boot-samples</a> 演示了 Starter 的使用方式，可以作为参考。</p>
 <h2 id="Change-Log"><a href="#Change-Log" class="headerlink" title="Change Log"></a>Change Log</h2><p><a href="https://github.com/drtrang/druid-spring-boot/releases" target="_blank" rel="external">Release Notes</a></p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>任何意见和建议可以提 <a href="https://github.com/drtrang/druid-spring-boot/issues" target="_blank" rel="external">Issue</a>，我会酌情加到 <a href="https://github.com/drtrang/druid-spring-boot/blob/master/TODO.md" target="_blank" rel="external">Todo List</a>，一般情况一周内迭代完毕。</p>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>任何意见和建议可以提 <a href="https://github.com/drtrang/druid-spring-boot/issues" target="_blank" rel="external">ISSUE</a>，我会酌情加到 <a href="https://github.com/drtrang/druid-spring-boot/blob/master/TODO.md" target="_blank" rel="external">Todo List</a>，一般情况一周内迭代完毕。</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 ]]></content>
     
     <summary type="html">
@@ -91,58 +90,10 @@
     
     </summary>
     
-      <category term="SpringBoot" scheme="http://blog.trang.space/categories/SpringBoot/"/>
+      <category term="最佳实践" scheme="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     
     
-      <category term="springboot" scheme="http://blog.trang.space/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MyBatis Type Handlers for Encrypt</title>
-    <link href="http://blog.trang.space/2017/04/17/MyBatis%20Type%20Handlers%20for%20Encrypt/"/>
-    <id>http://blog.trang.space/2017/04/17/MyBatis Type Handlers for Encrypt/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-05-22T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>应公司安全部门要求，需要对数据库中的敏感信息做加密处理。由于此次需求涉及的字段较多，手动加解密颇为不便且改动较大，一个更加简单、通用的解决方案势在必行。</p>
-<p><code>typehandlers-encrypt</code> 项目在这种背景下诞生，用户使用时无需更改业务代码，仅需少量配置即可实现数据库指定字段的加解密操作，大大减小了对用户的影响。</p>
-<a id="more"></a>
-<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><code>typehandlers-encrypt</code> 基于 MyBatis 的 TypeHandler 开发，通过 TypeHandler 可以在 JavaType 和 JdbcType 中互相转换的特性，拦截 JavaType 为 <code>com.github.trang.typehandlers.alias.Encrypt</code> 的 SQL，在预处理语句（PreparedStatement）中设置参数时自动加密，并在结果集（ResultSet）中取值时自动解密。</p>
-<p>注：由于依赖 MyBatis，使用时需要将 <code>EncryptTypeHandler</code> 和 <code>Encrypt</code> 注册到 MyBatis，否则无法生效，注册方式见 <strong>声明 EncryptTypeHandler</strong>。</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>typehandlers-encrypt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="声明-EncryptTypeHandler"><a href="#声明-EncryptTypeHandler" class="headerlink" title="声明 EncryptTypeHandler"></a>声明 EncryptTypeHandler</h3><h4 id="1-单独使用-MyBatis"><a href="#1-单独使用-MyBatis" class="headerlink" title="1. 单独使用 MyBatis"></a>1. 单独使用 MyBatis</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- mybatis-config.xml --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.alias"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">typeHandlers</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.type"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeHandlers</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="2-与-Spring-结合"><a href="#2-与-Spring-结合" class="headerlink" title="2. 与 Spring 结合"></a>2. 与 Spring 结合</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="function"><span class="keyword">public</span> SqlSessionFactory <span class="title">sqlSessionFactory</span><span class="params">(Configuration config)</span> </span>&#123;</div><div class="line">    SqlSessionFactoryBean factory = <span class="keyword">new</span> SqlSessionFactoryBean();</div><div class="line">    factory.setTypeAliasesPackage(<span class="string">"com.github.trang.typehandlers.alias"</span>);</div><div class="line">    factory.setTypeHandlersPackage(<span class="string">"com.github.trang.typehandlers.type"</span>);</div><div class="line">    <span class="keyword">return</span> factory.getObject();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="3-与-SpringBoot-结合"><a href="#3-与-SpringBoot-结合" class="headerlink" title="3. 与 SpringBoot 结合"></a>3. 与 SpringBoot 结合</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##application.yml</span></div><div class="line"><span class="attr">mybatis:</span></div><div class="line"><span class="attr">    type-aliases-package:</span> <span class="string">com.github.trang.typehandlers.alias</span></div><div class="line"><span class="attr">    type-handlers-package:</span> <span class="string">com.github.trang.typehandlers.type</span></div></pre></td></tr></table></figure>
-<p>注：以上配置方式<strong>任选其一</strong>即可，请根据实际情况选择。</p>
-<h3 id="使用-EncryptTypeHandler"><a href="#使用-EncryptTypeHandler" class="headerlink" title="使用 EncryptTypeHandler"></a>使用 EncryptTypeHandler</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- select --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">javaType</span>=<span class="string">"string"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"username"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">javaType</span>=<span class="string">"encrypt"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"password"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- insert --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    insert into user (id, username, password)</div><div class="line">    values (#&#123;id,jdbcType=BIGINT&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- update --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"update"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    update user set password=#&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125; where id=#&#123;id&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p><code>typehandlers-encrypt</code> 内置了 16 位长度密钥与 AES 加密算法，支持开箱即用，但用户也可以自定义密钥和加密算法，只需要在配置文件中声明对应的属性即可。需要注意，<strong>两者同时配置时，要声明在同一文件里</strong>。</p>
-<p>配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
-<h3 id="配置文件查找"><a href="#配置文件查找" class="headerlink" title="配置文件查找"></a>配置文件查找</h3><p>方式一：项目启动时，会在项目的 Classpath 中依次查找名称为 <code>encrypt</code>、<code>properties/config-common</code>、<code>properties/config</code>、<code>config</code>、<code>application</code> 的 Properties 文件，直到文件存在且文件中包含名称为 <code>encrypt.private.key</code> 的属性时停止。</p>
-<p>方式二：如果项目中不存在以上文件，且不想单独新增，也可以在项目启动时调用 <code>ConfigUtil.bundleNames(&quot;xxx&quot;)</code> 来指定要读取的文件，这时只会从用户给定的文件中查找。</p>
-<p><strong>当没有查找到相应配置时，项目会使用内置的配置。</strong></p>
-<h3 id="自定义密钥"><a href="#自定义密钥" class="headerlink" title="自定义密钥"></a>自定义密钥</h3><p><code>typehandlers-encrypt</code> 支持自定义密钥，只需在配置文件中声明即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div></pre></td></tr></table></figure></p>
-<h3 id="自定义加密算法"><a href="#自定义加密算法" class="headerlink" title="自定义加密算法"></a>自定义加密算法</h3><p><code>typehandlers-encrypt</code> 默认的加密算法是 <strong>AES 对称加密</strong>，如果默认算法不满足实际需求，用户可以自己实现 <code>com.github.trang.typehandlers.crypt.Crypt</code> 接口，并在配置文件中声明实现类的全路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
-<h2 id="硬广"><a href="#硬广" class="headerlink" title="硬广"></a>硬广</h2><p>目前项目已开源，并上传到 <a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="external">Github</a>，大家感兴趣的话可以阅读源码。<a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="external">Github</a> 中有配套的 Demo 演示 <a href="https://github.com/drtrang/typehandlers-encrypt-demo" target="_blank" rel="external"><code>typehandlers-encrypt-demo</code></a>，其中包括 <code>typehandlers-encrypt</code> 完整的使用方式，可以作为参考。</p>
-<p>如果有问题，可以在 Github 上提 Issue，或者微信交流，以下是联系方式：<br>我的 Github 主页：<a href="https://github.com/drtrang" target="_blank" rel="external">https://github.com/drtrang</a><br>该项目的 Github 地址：<a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="external">https://github.com/drtrang/typehandlers-encrypt</a><br>Demo 的 Github 地址：<a href="https://github.com/drtrang/typehandlers-encrypt-demo" target="_blank" rel="external">https://github.com/drtrang/typehandlers-encrypt-demo</a><br>BeanCopier 工具：<a href="https://github.com/drtrang/Copiers" target="_blank" rel="external">https://github.com/drtrang/Copiers</a><br>QQ：349096849</p>
-<blockquote>
-<p><strong>注意：</strong></p>
-<ol>
-<li>目前 <code>EncryptTypeHandler</code> 只支持 JavaType 为 <strong>String</strong> 的情形，如有其它需求，请及时联系我。</li>
-<li>加密时字段只过滤 <strong>null 值</strong>，非 null 的字段不做任何处理直接加密。</li>
-</ol>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;应公司安全部门要求，需要对数据库中的敏感信息做加密处理。由于此次需求涉及的字段较多，手动加解密颇为不便且改动较大，一个更加简单、通用的解决方案势在必行。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;typehandlers-encrypt&lt;/code&gt; 项目在这种背景下诞生，用户使用时无需更改业务代码，仅需少量配置即可实现数据库指定字段的加解密操作，大大减小了对用户的影响。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="MyBatis" scheme="http://blog.trang.space/tags/MyBatis/"/>
+      <category term="Spring Boot" scheme="http://blog.trang.space/tags/Spring-Boot/"/>
     
   </entry>
   
@@ -160,7 +111,6 @@
 <li>当读成为 DB 瓶颈时，很容易进行水平拓展</li>
 <li>增加冗余，实现高可用，出现故障后可快速恢复，仅丢失少量数据或不丢失数据</li>
 </ol>
-<a id="more"></a>
 <h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><p>读写分离首先需要 DB 实例的支持，配置主库、从库以及主从同步策略，此步骤一般交给 OP 即可。实例搭建完毕后，我们就可以开发相应模块，以实现真正的读写分离。</p>
 <p>业界的实现方式一般分为两种：<strong>DB 中间件</strong> 和 <strong>应用层读写分离</strong>，二者均有各自的优缺点，详情见下表：</p>
 <h3 id="DB-中间件"><a href="#DB-中间件" class="headerlink" title="DB 中间件"></a>DB 中间件</h3><blockquote>
@@ -275,25 +225,69 @@
 </tbody>
 </table>
 <p>如此一来，之前的问题都已经解决。我们仅仅通过 Spring 自带的 <code>@Transactional</code> 注解即可指定数据源，对比之前简化不少。</p>
-<h2 id="硬广"><a href="#硬广" class="headerlink" title="硬广"></a>硬广</h2><p>由于篇幅原因，文章中没有展示具体的执行结果。完整代码已打包成 <code>dynamic-data-source-demo</code>项目，并上传到 <a href="https://github.com/drtrang/dynamic-data-source-demo" target="_blank" rel="external">Github</a>，项目中提供完整的单元测试，详情大家可以 Clone 到本地自己执行一遍。</p>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>由于篇幅原因，文章中没有展示具体的执行结果。完整代码已打包成 <code>dynamic-data-source-demo</code>项目，并上传到 <a href="https://github.com/drtrang/dynamic-data-source-demo" target="_blank" rel="external">Github</a>，项目中提供完整的单元测试，详情大家可以 Clone 到本地自己执行一遍。</p>
 <p><code>dynamic-data-source-demo</code> 项目基于 Spring Boot，集成了 MyBatis、通用 Mapper、PageHelper、Druid、Copiers，可以作为简单的脚手架使用，欢迎大家 Star 或者 Fork 到自己的仓库。</p>
-<p>如果有问题，可以在 Github 上提 Issue，或者微信交流，以下是联系方式：<br>我的 Github 地址：<a href="https://github.com/drtrang" target="_blank" rel="external">https://github.com/drtrang</a><br>项目 Github 地址：<a href="https://github.com/drtrang/dynamic-data-source-demo" target="_blank" rel="external">https://github.com/drtrang/dynamic-data-source-demo</a><br>BeanCopier 工具：<a href="https://github.com/drtrang/Copiers" target="_blank" rel="external">https://github.com/drtrang/Copiers</a><br>QQ：349096849</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;数据库读写分离是构建高性能 Web 架构不可缺少的一环，其主要提升在于：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;主从职责单一，主写从读，可以极大程度地缓解 X 锁和 S 锁的竞争，并且可以进行针对性调优&lt;/li&gt;
-&lt;li&gt;请求分流，减少主库压力&lt;/li&gt;
-&lt;li&gt;当读成为 DB 瓶颈时，很容易进行水平拓展&lt;/li&gt;
-&lt;li&gt;增加冗余，实现高可用，出现故障后可快速恢复，仅丢失少量数据或不丢失数据&lt;/li&gt;
-&lt;/ol&gt;
+      数据库读写分离是构建高性能 Web 架构不可缺少的一环
     
     </summary>
     
+      <category term="最佳实践" scheme="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     
-      <category term="读写分离" scheme="http://blog.trang.space/tags/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/"/>
+    
+      <category term="架构" scheme="http://blog.trang.space/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyBatis Type Handlers for Encrypt</title>
+    <link href="http://blog.trang.space/2017/04/17/MyBatis%20Type%20Handlers%20for%20Encrypt/"/>
+    <id>http://blog.trang.space/2017/04/17/MyBatis Type Handlers for Encrypt/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-05-22T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>应公司安全部门要求，需要对数据库中的敏感信息做加密处理。由于此次需求涉及的字段较多，手动加解密颇为不便且改动较大，一个更加简单、通用的解决方案势在必行。</p>
+<p><code>typehandlers-encrypt</code> 项目在这种背景下诞生，用户使用时无需更改业务代码，仅需少量配置即可实现数据库指定字段的加解密操作，大大减小了对用户的影响。</p>
+<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><code>typehandlers-encrypt</code> 基于 MyBatis 的 TypeHandler 开发，通过 TypeHandler 可以在 JavaType 和 JdbcType 中互相转换的特性，拦截 JavaType 为 <code>com.github.trang.typehandlers.alias.Encrypt</code> 的 SQL，在预处理语句（PreparedStatement）中设置参数时自动加密，并在结果集（ResultSet）中取值时自动解密。</p>
+<p>注：由于依赖 MyBatis，使用时需要将 <code>EncryptTypeHandler</code> 和 <code>Encrypt</code> 注册到 MyBatis，否则无法生效，注册方式见 <strong>声明 EncryptTypeHandler</strong>。</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>typehandlers-encrypt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="声明-EncryptTypeHandler"><a href="#声明-EncryptTypeHandler" class="headerlink" title="声明 EncryptTypeHandler"></a>声明 EncryptTypeHandler</h3><h4 id="1-单独使用-MyBatis"><a href="#1-单独使用-MyBatis" class="headerlink" title="1. 单独使用 MyBatis"></a>1. 单独使用 MyBatis</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- mybatis-config.xml --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.alias"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">typeHandlers</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.type"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeHandlers</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="2-与-Spring-结合"><a href="#2-与-Spring-结合" class="headerlink" title="2. 与 Spring 结合"></a>2. 与 Spring 结合</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="function"><span class="keyword">public</span> SqlSessionFactory <span class="title">sqlSessionFactory</span><span class="params">(Configuration config)</span> </span>&#123;</div><div class="line">    SqlSessionFactoryBean factory = <span class="keyword">new</span> SqlSessionFactoryBean();</div><div class="line">    factory.setTypeAliasesPackage(<span class="string">"com.github.trang.typehandlers.alias"</span>);</div><div class="line">    factory.setTypeHandlersPackage(<span class="string">"com.github.trang.typehandlers.type"</span>);</div><div class="line">    <span class="keyword">return</span> factory.getObject();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="3-与-SpringBoot-结合"><a href="#3-与-SpringBoot-结合" class="headerlink" title="3. 与 SpringBoot 结合"></a>3. 与 SpringBoot 结合</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##application.yml</span></div><div class="line"><span class="attr">mybatis:</span></div><div class="line"><span class="attr">    type-aliases-package:</span> <span class="string">com.github.trang.typehandlers.alias</span></div><div class="line"><span class="attr">    type-handlers-package:</span> <span class="string">com.github.trang.typehandlers.type</span></div></pre></td></tr></table></figure>
+<p>注：以上配置方式<strong>任选其一</strong>即可，请根据实际情况选择。</p>
+<h3 id="使用-EncryptTypeHandler"><a href="#使用-EncryptTypeHandler" class="headerlink" title="使用 EncryptTypeHandler"></a>使用 EncryptTypeHandler</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- select --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">javaType</span>=<span class="string">"string"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"username"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">javaType</span>=<span class="string">"encrypt"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"password"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- insert --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    insert into user (id, username, password)</div><div class="line">    values (#&#123;id,jdbcType=BIGINT&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- update --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"update"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    update user set password=#&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125; where id=#&#123;id&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p><code>typehandlers-encrypt</code> 内置了 16 位长度密钥与 AES 加密算法，支持开箱即用，但用户也可以自定义密钥和加密算法，只需要在配置文件中声明对应的属性即可。需要注意，<strong>两者同时配置时，要声明在同一文件里</strong>。</p>
+<p>配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
+<h3 id="配置文件查找"><a href="#配置文件查找" class="headerlink" title="配置文件查找"></a>配置文件查找</h3><p>方式一：项目启动时，会在项目的 Classpath 中依次查找名称为 <code>encrypt</code>、<code>properties/config-common</code>、<code>properties/config</code>、<code>config</code>、<code>application</code> 的 Properties 文件，直到文件存在且文件中包含名称为 <code>encrypt.private.key</code> 的属性时停止。</p>
+<p>方式二：如果项目中不存在以上文件，且不想单独新增，也可以在项目启动时调用 <code>ConfigUtil.bundleNames(&quot;xxx&quot;)</code> 来指定要读取的文件，这时只会从用户给定的文件中查找。</p>
+<p><strong>当没有查找到相应配置时，项目会使用内置的配置。</strong></p>
+<h3 id="自定义密钥"><a href="#自定义密钥" class="headerlink" title="自定义密钥"></a>自定义密钥</h3><p><code>typehandlers-encrypt</code> 支持自定义密钥，只需在配置文件中声明即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div></pre></td></tr></table></figure></p>
+<h3 id="自定义加密算法"><a href="#自定义加密算法" class="headerlink" title="自定义加密算法"></a>自定义加密算法</h3><p><code>typehandlers-encrypt</code> 默认的加密算法是 <strong>AES 对称加密</strong>，如果默认算法不满足实际需求，用户可以自己实现 <code>com.github.trang.typehandlers.crypt.Crypt</code> 接口，并在配置文件中声明实现类的全路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>目前项目已开源，并上传到 <a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="external">Github</a>，大家感兴趣的话可以阅读源码。<a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="external">Github</a> 中有配套的 Demo 演示 <a href="https://github.com/drtrang/typehandlers-encrypt-demo" target="_blank" rel="external"><code>typehandlers-encrypt-demo</code></a>，其中包括 <code>typehandlers-encrypt</code> 完整的使用方式，可以作为参考。</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
+<blockquote>
+<p><strong>注意：</strong></p>
+<ol>
+<li>目前 <code>EncryptTypeHandler</code> 只支持 JavaType 为 <strong>String</strong> 的情形，如有其它需求，请及时联系我。</li>
+<li>加密时字段只过滤 <strong>null 值</strong>，非 null 的字段不做任何处理直接加密。</li>
+</ol>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;应公司安全部门要求，需要对数据库中的敏感信息做加密处理。由于此次需求涉及的字段较多，手动加解密颇为不便且改动较大，一个更加简单、通用的解决方
+    
+    </summary>
+    
+      <category term="最佳实践" scheme="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+      <category term="MyBatis" scheme="http://blog.trang.space/tags/MyBatis/"/>
     
   </entry>
   
@@ -304,8 +298,7 @@
     <published>2016-09-01T16:00:00.000Z</published>
     <updated>2016-09-01T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Guava是Google的一个开源项目，包含许多Google核心的Java常用库。</p>
-<h2 id="1-com-google-common-base"><a href="#1-com-google-common-base" class="headerlink" title="1. com.google.common.base"></a>1. com.google.common.base</h2><h3 id="1-1-字符串处理"><a href="#1-1-字符串处理" class="headerlink" title="1.1 字符串处理"></a>1.1 字符串处理</h3><p>Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。</p>
+    <content type="html"><![CDATA[<h2 id="1-com-google-common-base"><a href="#1-com-google-common-base" class="headerlink" title="1. com.google.common.base"></a>1. com.google.common.base</h2><h3 id="1-1-字符串处理"><a href="#1-1-字符串处理" class="headerlink" title="1.1 字符串处理"></a>1.1 字符串处理</h3><p>Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。</p>
 <h4 id="1-1-1-CharMatcher"><a href="#1-1-1-CharMatcher" class="headerlink" title="1.1.1 CharMatcher"></a>1.1.1 CharMatcher</h4><p><code>com.google.common.base.CharMatcher</code>是Guava提供的用于进行字符匹配的工具类，翻开<code>CharMatcher</code>的源码，我们知道<code>CharMatcher</code>是一个抽象类，在其内部Guava做了大量默认实现，用来更方便的对字符串做匹配，并通过构造者模式对匹配后的字符串进行处理。</p>
 <p><em>注：不支持正则表达式</em></p>
 <h4 id="1-1-2-Joiner"><a href="#1-1-2-Joiner" class="headerlink" title="1.1.2 Joiner"></a>1.1.2 Joiner</h4><p><code>com.google.common.base.Joiner</code>用来拼接字符串，可以避免大量的手动拼接<code>appendTo()</code>方法，<code>Joiner</code>可以实现<code>Iterable&lt;?&gt;</code>、<code>Object[]</code>、<code>Map&lt;?, ?&gt;</code>类型的拼接。但要实现基本类型数组的拼接就无能为力了，这时就需要借助<code>com.google.common.base.primitives</code>包的基本类型工具类来实现了。</p>
@@ -458,10 +451,10 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
     
     </summary>
     
-      <category term="Java工具" scheme="http://blog.trang.space/categories/Java%E5%B7%A5%E5%85%B7/"/>
+      <category term="技术内幕" scheme="http://blog.trang.space/categories/%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95/"/>
     
     
-      <category term="tools" scheme="http://blog.trang.space/tags/tools/"/>
+      <category term="Tools" scheme="http://blog.trang.space/tags/Tools/"/>
     
   </entry>
   
@@ -472,7 +465,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
     <published>2016-06-16T16:00:00.000Z</published>
     <updated>2017-06-23T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Copiers 是一个优雅的 Bean 拷贝工具，基于不同底层实现的二次封装。<br>Copiers 隐藏了底层实现，仅暴露统一的 Api 来完成 Copy 过程，用户可随时通过工厂方法切换底层的拷贝方式。</p>
+    <content type="html"><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Copiers 是一个优雅的 Bean 拷贝工具，基于不同底层实现的二次封装。<br>Copiers 隐藏了底层实现，仅暴露统一的 Api 来完成 Copy 过程，用户可随时通过工厂方法切换底层的拷贝方式。</p>
 <h2 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h2><p>Copiers 目前有两种底层实现：<code>Cglib</code> &amp; <code>EasyMapper</code>，两种方式差明显，可根据实际情况任选其一或二者结合使用。</p>
 <h3 id="Cglib"><a href="#Cglib" class="headerlink" title="Cglib"></a>Cglib</h3><p>Cglib 中的 BeanCopier 是目前性能最好的拷贝方式，基于 ASM 字节码增强技术，千万次拷贝仅在 <em>1s</em> 以内，但高性能带来的显著缺点是功能单一、拓展性差，BeanCopier 仅支持源对象到目标对象的完全拷贝，不支持自定义映射，Convert 拓展也只能对拷贝的 value 做处理，很多情况下不满足实际的业务需求。</p>
 <h3 id="EasyMapper"><a href="#EasyMapper" class="headerlink" title="EasyMapper"></a>EasyMapper</h3><p><a href="https://github.com/neoremind/easy-mapper" target="_blank" rel="external">EasyMapper</a> 基于 Javassist 的字节码技术，千万次拷贝在 <em>4s</em> 左右。虽不如 BeanCopier，但大幅领先 Apache Commons BeanUtils、Dozer 等其它拷贝方式。且 EasyMapper 的优点在于使用灵活、扩展性强，具体情况可以查看 EasyMapper 的 Github， 地址：<a href="https://github.com/neoremind/easy-mapper" target="_blank" rel="external">https://github.com/neoremind/easy-mapper</a></p>
@@ -481,7 +474,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//拷贝对象，创建新对象，使用EasyMapper</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = Copiers.create(User.class, UserEntity.class).copy(user);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，传入目标对象</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.create(User.class, UserEntity.class).copy(user, entity);</div><div class="line"></div><div class="line"><span class="comment">//拷贝List</span></div><div class="line">User user1 = User.of(<span class="string">"trang"</span>, <span class="number">25</span>);</div><div class="line">User user2 = User.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">List&lt;User&gt; users = ImmutableList.of(user1, user2);</div><div class="line">List&lt;UserEntity&gt; entities = Copiers.create(User.class, UserEntity.class).map(users);</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象，使用cglib，会拷贝null值</span></div><div class="line">User user = User.of(<span class="string">"trang"</span>, <span class="keyword">null</span>);</div><div class="line">UserEntity entity = UserEntity.of(<span class="string">"meng"</span>, <span class="number">24</span>);</div><div class="line">Copiers.createCglib(User.class, UserEntity.class).copy(user, entity);</div></pre></td></tr></table></figure>
 <h3 id="复杂拷贝"><a href="#复杂拷贝" class="headerlink" title="复杂拷贝"></a>复杂拷贝</h3><p>若简单拷贝不满足业务需求，可以通过 <code>Copiers.createMapper()</code> 自定义映射关系，基于 EasyMapper 的特性实现，支持级联拷贝。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将源对象的name字段映射到目标对象的username字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).field(<span class="string">"name"</span>, <span class="string">"username"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//排除拷贝字段</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>, <span class="string">"sex"</span>).register();</div><div class="line"></div><div class="line"><span class="comment">//强制拷贝值为null的字段，默认不拷贝</span></div><div class="line">Copiers.createMapper(User.class, UserEntity.class).skip(<span class="string">"name"</span>).isNull(<span class="keyword">true</span>).register();</div></pre></td></tr></table></figure>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 ]]></content>
     
     <summary type="html">
@@ -493,7 +486,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
       <category term="Java工具" scheme="http://blog.trang.space/categories/Java%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="tools" scheme="http://blog.trang.space/tags/tools/"/>
+      <category term="Tools" scheme="http://blog.trang.space/tags/Tools/"/>
     
   </entry>
   

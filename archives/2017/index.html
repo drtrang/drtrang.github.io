@@ -17,10 +17,6 @@
 
 
 
-  
-  
-  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
-
 
 
 
@@ -75,7 +71,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -128,15 +124,15 @@
     tabs: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -234,12 +230,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            标签
+            分类
           </a>
         </li>
       
@@ -314,12 +310,7 @@
       <span class="archive-move-on"></span>
 
       <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志 继续努力。
+        目前共计 6 篇日志
       </span>
 
       
@@ -417,9 +408,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/04/17/MyBatis Type Handlers for Encrypt/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/17/应用层读写分离的改进/" itemprop="url">
               
-                <span itemprop="name">MyBatis Type Handlers for Encrypt</span>
+                <span itemprop="name">应用层读写分离的改进</span>
               
             </a>
         
@@ -454,9 +445,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/04/17/应用层读写分离的改进/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/17/MyBatis Type Handlers for Encrypt/" itemprop="url">
               
-                <span itemprop="name">应用层读写分离的改进</span>
+                <span itemprop="name">MyBatis Type Handlers for Encrypt</span>
               
             </a>
         
@@ -516,7 +507,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
+               src="/images/avatar.jpg"
                alt="Trang" />
           <p class="site-author-name" itemprop="name">Trang</p>
            
@@ -539,7 +530,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1296,9 +1287,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
-
 
   
 

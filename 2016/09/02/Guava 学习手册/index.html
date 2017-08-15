@@ -17,10 +17,6 @@
 
 
 
-  
-  
-  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
-
 
 
 
@@ -75,7 +71,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,7 +84,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools," />
+  <meta name="keywords" content="Tools," />
 
 
 
@@ -107,7 +103,7 @@
 
 
 <meta name="description" content="Guava 是 Google 的一个开源项目，包含许多 Google 核心的 Java 常用库">
-<meta name="keywords" content="tools">
+<meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Guava 学习手册">
 <meta property="og:url" content="http://blog.trang.space/2016/09/02/Guava 学习手册/index.html">
@@ -130,15 +126,15 @@
     tabs: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -236,12 +232,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            标签
+            分类
           </a>
         </li>
       
@@ -327,7 +323,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -374,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java工具/" itemprop="url" rel="index">
-                    <span itemprop="name">Java工具</span>
+                  <a href="/categories/技术内幕/" itemprop="url" rel="index">
+                    <span itemprop="name">技术内幕</span>
                   </a>
                 </span>
 
@@ -420,14 +416,13 @@
     
     
     
-    <div class="post-body han-init-context" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <p>Guava是Google的一个开源项目，包含许多Google核心的Java常用库。</p>
-<h2 id="1-com-google-common-base"><a href="#1-com-google-common-base" class="headerlink" title="1. com.google.common.base"></a>1. com.google.common.base</h2><h3 id="1-1-字符串处理"><a href="#1-1-字符串处理" class="headerlink" title="1.1 字符串处理"></a>1.1 字符串处理</h3><p>Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。</p>
+        <h2 id="1-com-google-common-base"><a href="#1-com-google-common-base" class="headerlink" title="1. com.google.common.base"></a>1. com.google.common.base</h2><h3 id="1-1-字符串处理"><a href="#1-1-字符串处理" class="headerlink" title="1.1 字符串处理"></a>1.1 字符串处理</h3><p>Guava把字符串处理动作分了几大类，每种动作都有对应的工具类实现，我们可以根据需要使用对应的工具类。</p>
 <h4 id="1-1-1-CharMatcher"><a href="#1-1-1-CharMatcher" class="headerlink" title="1.1.1 CharMatcher"></a>1.1.1 CharMatcher</h4><p><code>com.google.common.base.CharMatcher</code>是Guava提供的用于进行字符匹配的工具类，翻开<code>CharMatcher</code>的源码，我们知道<code>CharMatcher</code>是一个抽象类，在其内部Guava做了大量默认实现，用来更方便的对字符串做匹配，并通过构造者模式对匹配后的字符串进行处理。</p>
 <p><em>注：不支持正则表达式</em></p>
 <h4 id="1-1-2-Joiner"><a href="#1-1-2-Joiner" class="headerlink" title="1.1.2 Joiner"></a>1.1.2 Joiner</h4><p><code>com.google.common.base.Joiner</code>用来拼接字符串，可以避免大量的手动拼接<code>appendTo()</code>方法，<code>Joiner</code>可以实现<code>Iterable&lt;?&gt;</code>、<code>Object[]</code>、<code>Map&lt;?, ?&gt;</code>类型的拼接。但要实现基本类型数组的拼接就无能为力了，这时就需要借助<code>com.google.common.base.primitives</code>包的基本类型工具类来实现了。</p>
@@ -582,7 +577,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.png" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
     <div>订阅我的微信公众号，文章同步更新</div>
 </div>
 
@@ -592,12 +587,30 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Trang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://blog.trang.space/2016/09/02/Guava 学习手册/" title="Guava 学习手册">http://blog.trang.space/2016/09/02/Guava 学习手册/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag"># tools</a>
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
           
         </div>
       
@@ -620,8 +633,8 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/17/应用层读写分离的改进/" rel="prev" title="应用层读写分离的改进">
-                应用层读写分离的改进 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/17/MyBatis Type Handlers for Encrypt/" rel="prev" title="MyBatis Type Handlers for Encrypt">
+                MyBatis Type Handlers for Encrypt <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -640,12 +653,6 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
 
 
     <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -695,7 +702,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
+               src="/images/avatar.jpg"
                alt="Trang" />
           <p class="site-author-name" itemprop="name">Trang</p>
            
@@ -718,7 +725,7 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1489,9 +1496,6 @@ SetView&lt;E&gt; symmetricDifference(final Set&lt;? extends E&gt; set1, final Se
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
-
 
   
 

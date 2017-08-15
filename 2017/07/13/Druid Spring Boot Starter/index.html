@@ -17,10 +17,6 @@
 
 
 
-  
-  
-  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
-
 
 
 
@@ -75,7 +71,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,7 +84,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="springboot," />
+  <meta name="keywords" content="Spring Boot," />
 
 
 
@@ -107,7 +103,7 @@
 
 
 <meta name="description" content="Druid Spring Boot Starter 将帮助你在 Spring Boot 中使用 Druid">
-<meta name="keywords" content="springboot">
+<meta name="keywords" content="Spring Boot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Druid Spring Boot Starter">
 <meta property="og:url" content="http://blog.trang.space/2017/07/13/Druid Spring Boot Starter/index.html">
@@ -134,15 +130,15 @@
     tabs: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -240,12 +236,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            标签
+            分类
           </a>
         </li>
       
@@ -331,7 +327,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -378,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
+                  <a href="/categories/最佳实践/" itemprop="url" rel="index">
+                    <span itemprop="name">最佳实践</span>
                   </a>
                 </span>
 
@@ -424,14 +420,13 @@
     
     
     
-    <div class="post-body han-init-context" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <p><a href="https://github.com/drtrang/druid-spring-boot" target="_blank" rel="external">Druid Spring Boot Starter</a> 将帮助你在 Spring Boot 中使用 Druid。</p>
-<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+        <h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="NEW"><a href="#NEW" class="headerlink" title="NEW !"></a>NEW !</h2><ol>
 <li>新增 ConfigFilter 的自动配置，替换 Druid 默认的 <code>connectionProperties</code> 方式</li>
 <li>完美支持多数据源 <a href="https://github.com/drtrang/druid-spring-boot/issues/2" target="_blank" rel="external">ISSUE #2</a></li>
@@ -452,8 +447,8 @@
 <p>参数枚举值：<br><img src="https://user-images.githubusercontent.com/13851701/28148904-3bb9b07a-67bc-11e7-9912-c7043c2d7de7.png" alt="db-type"></p>
 <h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><a href="https://github.com/drtrang/druid-spring-boot/tree/master/druid-spring-boot-samples" target="_blank" rel="external">druid-spring-boot-samples</a> 演示了 Starter 的使用方式，可以作为参考。</p>
 <h2 id="Change-Log"><a href="#Change-Log" class="headerlink" title="Change Log"></a>Change Log</h2><p><a href="https://github.com/drtrang/druid-spring-boot/releases" target="_blank" rel="external">Release Notes</a></p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>任何意见和建议可以提 <a href="https://github.com/drtrang/druid-spring-boot/issues" target="_blank" rel="external">Issue</a>，我会酌情加到 <a href="https://github.com/drtrang/druid-spring-boot/blob/master/TODO.md" target="_blank" rel="external">Todo List</a>，一般情况一周内迭代完毕。</p>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">blog.trang.space</a></p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>任何意见和建议可以提 <a href="https://github.com/drtrang/druid-spring-boot/issues" target="_blank" rel="external">ISSUE</a>，我会酌情加到 <a href="https://github.com/drtrang/druid-spring-boot/blob/master/TODO.md" target="_blank" rel="external">Todo List</a>，一般情况一周内迭代完毕。</p>
+<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 
       
     </div>
@@ -464,7 +459,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.png" alt="Trang wechat" style="width: 200px; max-width: 100%;"/>
     <div>订阅我的微信公众号，文章同步更新</div>
 </div>
 
@@ -474,12 +469,30 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Trang
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://blog.trang.space/2017/07/13/Druid Spring Boot Starter/" title="Druid Spring Boot Starter">http://blog.trang.space/2017/07/13/Druid Spring Boot Starter/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/springboot/" rel="tag"># springboot</a>
+            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
           
         </div>
       
@@ -492,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/17/MyBatis Type Handlers for Encrypt/" rel="next" title="MyBatis Type Handlers for Encrypt">
-                <i class="fa fa-chevron-left"></i> MyBatis Type Handlers for Encrypt
+              <a href="/2017/04/17/应用层读写分离的改进/" rel="next" title="应用层读写分离的改进">
+                <i class="fa fa-chevron-left"></i> 应用层读写分离的改进
               </a>
             
           </div>
@@ -522,12 +535,6 @@
 
 
     <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -577,7 +584,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
+               src="/images/avatar.jpg"
                alt="Trang" />
           <p class="site-author-name" itemprop="name">Trang</p>
            
@@ -600,7 +607,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1371,9 +1378,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
-
 
   
 
