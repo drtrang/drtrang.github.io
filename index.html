@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -36,10 +43,6 @@
 
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -120,19 +123,19 @@
     root: '/',
     scheme: 'Mist',
     sidebar: {"position":"right","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
     tabs: true,
     motion: true,
     duoshuo: {
-      userId: 'undefined',
+      userId: '0',
       author: '博主'
     },
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "",
-      labels: ""
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -1351,8 +1354,6 @@
 
 
 
-  
-
 
 
 
@@ -1378,9 +1379,6 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
@@ -1906,6 +1904,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
 
   
 
