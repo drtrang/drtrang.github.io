@@ -128,7 +128,7 @@
     sidebar: {"position":"right","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     tabs: true,
-    motion: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -220,7 +220,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             首页
           </a>
@@ -230,7 +230,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             归档
           </a>
@@ -240,7 +240,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             分类
           </a>
@@ -250,7 +250,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             关于
           </a>
@@ -504,14 +504,15 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="Trang" />
-          <p class="site-author-name" itemprop="name">Trang</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.jpg"
+              alt="Trang" />
+          
+            <p class="site-author-name" itemprop="name">Trang</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
+
         <nav class="site-state motion-element">
 
           
@@ -564,45 +565,25 @@
               <span class="links-of-author-item">
                 <a href="https://github.com/drtrang" target="_blank" title="GitHub">
                   
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
+                    <i class="fa fa-fw fa-globe"></i>GitHub</a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="https://www.zhihu.com/people/imnobody" target="_blank" title="知乎">
                   
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      知乎
-                    
-                </a>
+                    <i class="fa fa-fw fa-globe"></i>知乎</a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="tencent://message/?uin=349096849&site=blog.trang.space&menu=yes" target="_blank" title="QQ">
                   
-                    <i class="fa fa-fw fa-qq"></i>
-                  
-                    
-                      QQ
-                    
-                </a>
+                    <i class="fa fa-fw fa-globe"></i>QQ</a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="mailto:donghao.l@hotmail.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-fw fa-envelope"></i>
-                  
-                    
-                      Email
-                    
-                </a>
+                    <i class="fa fa-fw fa-globe"></i>Email</a>
               </span>
             
           
@@ -769,9 +750,9 @@
   
   
 
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
   
 
