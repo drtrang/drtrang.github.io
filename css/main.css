@@ -452,9 +452,6 @@ body {
     width: 900px;
   }
 }
-.main {
-  padding-bottom: 150px;
-}
 .main-inner {
   margin: 0 auto;
   width: 700px;
@@ -465,9 +462,6 @@ body {
   }
 }
 .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   min-height: 50px;
 }
@@ -502,9 +496,6 @@ code {
   background: #eee;
   border-radius: 3px;
   font-size: 16px;
-}
-pre {
-  padding: 10px;
 }
 pre code {
   padding: 0;
@@ -780,11 +771,11 @@ pre .javascript .function {
   border-color: #e1e1e1;
   color: #666;
 }
-.post-body .note.default a:not(.btn) {
+.post-body .note.default a {
   color: #666;
   border-bottom: 1px solid #666;
 }
-.post-body .note.default a:not(.btn):hover {
+.post-body .note.default a:hover {
   color: #454545;
   border-bottom: 1px solid #454545;
 }
@@ -793,11 +784,11 @@ pre .javascript .function {
   border-color: #e1c2ff;
   color: #6f42c1;
 }
-.post-body .note.primary a:not(.btn) {
+.post-body .note.primary a {
   color: #6f42c1;
   border-bottom: 1px solid #6f42c1;
 }
-.post-body .note.primary a:not(.btn):hover {
+.post-body .note.primary a:hover {
   color: #453298;
   border-bottom: 1px solid #453298;
 }
@@ -806,11 +797,11 @@ pre .javascript .function {
   border-color: #b3e5ef;
   color: #31708f;
 }
-.post-body .note.info a:not(.btn) {
+.post-body .note.info a {
   color: #31708f;
   border-bottom: 1px solid #31708f;
 }
-.post-body .note.info a:not(.btn):hover {
+.post-body .note.info a:hover {
   color: #215761;
   border-bottom: 1px solid #215761;
 }
@@ -819,11 +810,11 @@ pre .javascript .function {
   border-color: #d0e6be;
   color: #3c763d;
 }
-.post-body .note.success a:not(.btn) {
+.post-body .note.success a {
   color: #3c763d;
   border-bottom: 1px solid #3c763d;
 }
-.post-body .note.success a:not(.btn):hover {
+.post-body .note.success a:hover {
   color: #32562c;
   border-bottom: 1px solid #32562c;
 }
@@ -832,11 +823,11 @@ pre .javascript .function {
   border-color: #fae4cd;
   color: #8a6d3b;
 }
-.post-body .note.warning a:not(.btn) {
+.post-body .note.warning a {
   color: #8a6d3b;
   border-bottom: 1px solid #8a6d3b;
 }
-.post-body .note.warning a:not(.btn):hover {
+.post-body .note.warning a:hover {
   color: #714f30;
   border-bottom: 1px solid #714f30;
 }
@@ -845,11 +836,11 @@ pre .javascript .function {
   border-color: #ebcdd2;
   color: #a94442;
 }
-.post-body .note.danger a:not(.btn) {
+.post-body .note.danger a {
   color: #a94442;
   border-bottom: 1px solid #a94442;
 }
-.post-body .note.danger a:not(.btn):hover {
+.post-body .note.danger a:hover {
   color: #84333f;
   border-bottom: 1px solid #84333f;
 }
@@ -958,8 +949,8 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #555;
-  background: transparent;
+  color: #fff;
+  background: #222;
   border: 2px solid #222;
   text-decoration: none;
   border-radius: 0;
@@ -967,19 +958,12 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  line-height: 2;
 }
-.btn:hover {
+.btn:hover,
+.post-button .btn:hover {
   border-color: #222;
   color: #222;
   background: #fff;
-}
-.btn +.btn {
-  margin: 0 0 8px 8px;
-}
-.btn .fa-fw {
-  width: 1.285714285714286em;
-  text-align: left;
 }
 .btn-bar {
   display: block;
@@ -1005,7 +989,8 @@ pre .javascript .function {
   position: relative;
   top: -1px;
   margin: 0 10px;
-  padding: 0 11px;
+  padding: 0 10px;
+  line-height: 30px;
 }
 @media (max-width: 767px) {
   .page-number-basic,
@@ -1056,7 +1041,6 @@ pre .javascript .function {
     margin-bottom: 10px;
     border-top: 0;
     border-bottom: 1px solid #eee;
-    padding: 0 10px;
   }
   .pagination .prev:hover,
   .pagination .next:hover,
@@ -1253,7 +1237,7 @@ pre .javascript .function {
 }
 .post-body .image-caption,
 .post-body .figure .caption {
-  margin: -20px auto 15px;
+  margin: 10px auto 15px;
   text-align: center;
   font-size: 14px;
   color: #999;
@@ -1270,9 +1254,7 @@ pre .javascript .function {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-.use-motion .post-block,
-.use-motion .pagination,
-.use-motion .comments {
+.use-motion .post-block {
   opacity: 0;
 }
 .use-motion .post-header {
@@ -1290,6 +1272,9 @@ pre .javascript .function {
 @media (max-width: 767px) {
   .posts-expand {
     margin: 0 20px;
+  }
+  .post-body pre {
+    padding: 10px;
   }
   .post-body pre .gutter pre {
     padding-right: 10px;
@@ -1349,8 +1334,8 @@ pre .javascript .function {
   padding: 3px;
   border: 1px solid #ddd;
 }
-.posts-expand .post-body .fancybox img {
-  margin: 0 auto 25px;
+.posts-expand .fancybox img {
+  margin: 0 auto;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1471,9 +1456,15 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
+  font-size: 26px;
   text-align: center;
   word-break: break-word;
   font-weight: 400;
+}
+@media (max-width: 767px) {
+  .posts-expand .post-title {
+    font-size: 22px;
+  }
 }
 .posts-expand .post-title-link {
   display: inline-block;
@@ -1563,7 +1554,19 @@ pre .javascript .function {
   }
 }
 .post-button {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+.post-button .btn {
+  color: #555;
+  font-size: 14px;
+  background: transparent;
+  border-radius: 0;
+  line-height: 2;
+  margin: 0 4px 8px 4px;
+}
+.post-button .fa-fw {
+  width: 1.285714285714286em;
+  text-align: left;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1717,13 +1720,6 @@ pre .javascript .function {
   color: #999;
   text-align: center;
 }
-.site-overview-wrap {
-  overflow: hidden;
-}
-.site-overview {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 .sidebar-toggle {
   position: fixed;
   right: 30px;
@@ -1847,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #40ffab;
+  background: #c8250a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2806,7 +2802,7 @@ hr {
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1600px) {
@@ -2816,11 +2812,6 @@ hr {
 }
 .posts-expand .post-title:hover:before {
   background: #222;
-}
-@media (max-width: 767px) {
-  .posts-expand .post-body {
-    font-size: 12px;
-  }
 }
 .posts-expand .post-body img {
   margin: 0;
@@ -2844,8 +2835,10 @@ hr {
   text-align: left;
 }
 .post-button a {
+  margin: 0 8px 8px 0 !important;
   padding: 0;
   font-size: 14px;
+  color: #666;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
