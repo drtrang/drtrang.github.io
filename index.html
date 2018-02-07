@@ -62,9 +62,27 @@
   
 
   
+    
+      
+    
 
+    
   
 
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
   
 
   
@@ -78,7 +96,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -139,11 +157,11 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Trang,Java,Spring,SpringBoot" />
 
 
 <meta name="description" content="后端研发一枚，喜欢造轮子，严重工具控">
-<meta name="keywords" content="Hexo, NexT">
+<meta name="keywords" content="Trang,Java,Spring,SpringBoot">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Trang&#39;s Blog">
 <meta property="og:url" content="http://blog.trang.space/index.html">
@@ -154,8 +172,6 @@
 <meta name="twitter:title" content="Trang&#39;s Blog">
 <meta name="twitter:description" content="后端研发一枚，喜欢造轮子，严重工具控">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Trang's Blog" type="application/atom+xml" />
@@ -423,6 +439,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/11/Spring Boot 的 Maven 项目原型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/08/11/Spring Boot 的 Maven 项目原型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -576,6 +602,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/13/Druid Spring Boot Starter/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/07/13/Druid Spring Boot Starter/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -731,6 +767,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/17/MyBatis Type Handlers for Encrypt/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/17/MyBatis Type Handlers for Encrypt/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -885,6 +931,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/17/应用层读写分离的改进/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/17/应用层读写分离的改进/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1038,6 +1094,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/21/Copiers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/21/Copiers/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1469,25 +1535,29 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'JAw0LdecDTBGqxPWJd9u501d-gzGzoHsz',
+        appKey: 'y5UhLNdxJbQGKUTAbOyzLhQG',
+        placeholder: 'System.out.print();',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
