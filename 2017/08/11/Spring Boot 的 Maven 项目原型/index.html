@@ -464,6 +464,14 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -502,6 +510,9 @@
 
       
     </div>
+
+    
+
     
     
     
@@ -522,7 +533,7 @@
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者：</strong>Trang</li>
+    <strong>本文作者： </strong>Trang</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     <a href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/" title="Spring Boot 的 Maven 项目原型">http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/</a>
@@ -630,7 +641,7 @@
                 alt="Trang" />
             
               <p class="site-author-name" itemprop="name">Trang</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">后端研发一枚，喜欢造轮子，严重工具控</p>
           </div>
 
           
@@ -827,21 +838,20 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
+    <span class="site-uv" title="总访客量">
       <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
     </span>
   
 
   
-    <span class="site-pv">
+    <span class="site-pv" title="总访问量">
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
     </span>
   
 </div>
+
 
 
 
@@ -965,12 +975,14 @@
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
+    guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
