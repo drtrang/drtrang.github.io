@@ -157,21 +157,21 @@
 
 
   
-  <meta name="keywords" content="Spring Boot," />
+  <meta name="keywords" content="druid," />
 
 
-<meta name="description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
-<meta name="keywords" content="Spring Boot">
+<meta name="description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
+<meta name="keywords" content="druid">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot 的 Maven 项目原型">
-<meta property="og:url" content="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/index.html">
+<meta property="og:title" content="Druid 中 SQL 格式化的 BUG">
+<meta property="og:url" content="http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/index.html">
 <meta property="og:site_name" content="Trang&#39;s Blog">
-<meta property="og:description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
+<meta property="og:description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-10T16:00:00.000Z">
+<meta property="og:updated_time" content="2018-02-26T04:54:26.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot 的 Maven 项目原型">
-<meta name="twitter:description" content="Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目">
+<meta name="twitter:title" content="Druid 中 SQL 格式化的 BUG">
+<meta name="twitter:description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
 
 
 
@@ -180,7 +180,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/"/>
+  <link rel="canonical" href="http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/"/>
 
 
 
@@ -189,7 +189,7 @@
     sidebar: "",
   };
 </script>
-  <title>Spring Boot 的 Maven 项目原型 | Trang's Blog</title>
+  <title>Druid 中 SQL 格式化的 BUG | Trang's Blog</title>
   
 
 
@@ -377,7 +377,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/">
+    <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
@@ -394,7 +394,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Spring Boot 的 Maven 项目原型</h2>
+          <h2 class="post-title" itemprop="name headline">Druid 中 SQL 格式化的 BUG</h2>
         
 
         <div class="post-meta">
@@ -406,7 +406,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T00:00:00+08:00">2017-08-11</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-26T00:00:00+08:00">2018-02-26</time>
             
 
             
@@ -427,7 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/最佳实践/" itemprop="url" rel="index"><span itemprop="name">最佳实践</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术内幕/" itemprop="url" rel="index"><span itemprop="name">技术内幕</span></a></span>
 
                 
                 
@@ -442,8 +442,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/11/Spring Boot 的 Maven 项目原型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/08/11/Spring Boot 的 Maven 项目原型/" itemprop="commentCount"></span>
+                <a href="/2018/02/26/Druid 中 SQL 格式化的 BUG/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/26/Druid 中 SQL 格式化的 BUG/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -451,7 +451,7 @@
 
           
           
-             <span id="/2017/08/11/Spring Boot 的 Maven 项目原型/" class="leancloud_visitors" data-flag-title="Spring Boot 的 Maven 项目原型">
+             <span id="/2018/02/26/Druid 中 SQL 格式化的 BUG/" class="leancloud_visitors" data-flag-title="Druid 中 SQL 格式化的 BUG">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -476,8 +476,6 @@
           
 
           
-              <div class="post-description">Spring Boot Archetype 将帮助你快速生成 Spring Boot 项目</div>
-          
 
         </div>
       </header>
@@ -492,21 +490,15 @@
       
 
       
-        <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>随着微服务的流行，Spring Boot 在广大开发者中占据了越来越重要的位置，其开箱即用、自动配置的特性也给我们带来了诸多便利。</p>
-<p>然而 Spring Boot 只是一个基础框架，我们还是需要新建工程、技术选型、参数配置等一系列步骤才能搭建出一个完整的项目，繁冗又无趣，尤其对于初学者来说，这一过程还可能会出现各种各样莫名其妙的问题。</p>
-<p><a href="https://github.com/drtrang/maven-archetype-springboot" target="_blank" rel="noopener">Spring Boot Archetype</a> 则是为了解决上述痛点而打造，借助 <code>maven-archetype-plugin</code> 插件，预置了日志、缓存、AOP、数据访问、代码生成、文档生成等模块，并提供常见技术的最佳实践，用户只需几秒即可快速构建一个可运行的 Spring Boot 项目。</p>
-<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p>主页：<a href="https://github.com/drtrang/maven-archetype-springboot" target="_blank" rel="noopener">https://github.com/drtrang/maven-archetype-springboot</a><br>问题：<a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="noopener">https://github.com/drtrang/maven-archetype-springboot/issues</a><br>后续计划：<a href="https://github.com/drtrang/maven-archetype-springboot/blob/master/TODO.md" target="_blank" rel="noopener">https://github.com/drtrang/maven-archetype-springboot/blob/master/TODO.md</a></p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>基于 Spring Boot 1.5.6，内嵌 Jetty</li>
-<li>增加全局异常捕获、view to json 等功能</li>
-<li>集成通用 Mapper 和 PageHelper，提供 BaseService，常用 CRUD 无需编写代码</li>
-<li>集成 MyBatis Generator，提供 <a href="https://github.com/drtrang/mybatis-generator-extension" target="_blank" rel="noopener">MBG Plugin Extension</a>，如自动生成 Service 插件、支持 Lombok 插件等等</li>
-<li>集成 <a href="https://github.com/drtrang/druid-spring-boot" target="_blank" rel="noopener">Druid Spring Boot Starter</a>，无需显式声明数据源（支持多数据源）</li>
-<li>集成 Swagger2，HTTP 接口自动生成接口文档</li>
-<li>提供常用工具，如 SpringContextHolder、SqlMapper</li>
-</ul>
-<h2 id="ISSUE"><a href="#ISSUE" class="headerlink" title="ISSUE"></a>ISSUE</h2><p>项目刚刚发布，许多方面还有不足，希望大家多提意见，如果有任何想法和讨论，都可以放到 <a href="https://github.com/drtrang/maven-archetype-springboot/issues" target="_blank" rel="noopener">ISSUE</a> 平台，我会及时回复。有条件的用户还可以提 PR，成为该项目的 Contributor。</p>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
+        <p>前段时间在写一个格式化 SQL 的拦截器（<a href="https://github.com/drtrang/spring-boot-autoconfigure/blob/master/src/main/java/com/github/trang/autoconfigure/mybatis/SqlFormatterInterceptor.java" target="_blank" rel="noopener">SqlFormatterInterceptor</a>），其中格式化的部分借用了 Druid 现成的工具类 <a href="https://github.com/drtrang/spring-boot-autoconfigure/blob/master/src/main/java/com/github/trang/autoconfigure/mybatis/SqlFormatterInterceptor.java#L64" target="_blank" rel="noopener">SQLUtils</a>，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。</p>
+<a id="more"></a>
+<h3 id="原始-SQL"><a href="#原始-SQL" class="headerlink" title="原始 SQL"></a>原始 SQL</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String sql = <span class="string">"SELECT id,task_id,task_source, housedel_code, del_type, office_address, company_code, brand, "</span> +</div><div class="line">                <span class="string">"class1_code, class2_code, class2_name, status, create_time, end_time, creator_ucid, creator_name, "</span> +</div><div class="line">                <span class="string">"org_code, prove_id, prove_time, audit_ucid, audit_name, audit_reject_reason, audit_content, "</span> +</div><div class="line">                <span class="string">"audit_time, pass_mode, sms_content, sms_time \r\n FROM "</span> +</div><div class="line">                <span class="string">"sh_true_house_task \r\n  WHERE office_address = 0 AND status = 0 ORDER     BY id DESC"</span>;</div></pre></td></tr></table></figure>
+<h3 id="默认格式化"><a href="#默认格式化" class="headerlink" title="默认格式化"></a>默认格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 格式化代码</span></div><div class="line">SQLUtils.formatMySql(sql)</div><div class="line"><span class="comment">// 输出结果</span></div><div class="line">SELECT id, task_id, task_source, housedel_code, del_type</div><div class="line">    , office_address, company_code, brand, class1_code, class2_code</div><div class="line">    , class2_name, status, create_time, end_time, creator_ucid</div><div class="line">    , creator_name, org_code, prove_id, prove_time, audit_ucid</div><div class="line">    , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode</div><div class="line">    , sms_content, sms_time</div><div class="line">FROM sh_true_house_task</div><div class="line">WHERE office_address = <span class="number">0</span></div><div class="line">    AND status = <span class="number">0</span></div><div class="line">ORDER BY id DESC</div></pre></td></tr></table></figure>
+<h3 id="仅大写格式化"><a href="#仅大写格式化" class="headerlink" title="仅大写格式化"></a>仅大写格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 格式化代码</span></div><div class="line">SQLUtils.formatMySql(sql, <span class="keyword">new</span> FormatOption(VisitorFeature.OutputUCase))</div><div class="line"><span class="comment">// 输出结果</span></div><div class="line">SELECT id, task_id, task_source, housedel_code, del_type , office_address, company_code, brand, class1_code, class2_code , class2_name, status, create_time, end_time, creator_ucid , creator_name, org_code, prove_id, prove_time, audit_ucid , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode , sms_content, sms_time FROM sh_true_house_task WHERE office_address = <span class="number">0</span> AND status = <span class="number">0</span> ORDER BY id DESC</div></pre></td></tr></table></figure>
+<p>由上述结果可以看到，在仅使用 <code>OutputUCase</code> 配置时，输出的 SQL 中 <code>del_type</code>、<code>class2_code</code> 等字符后有多余的空格，经过仔细的翻看源码，问题最终定位在 <a href="https://github.com/alibaba/druid/blob/master/src/main/java/com/alibaba/druid/sql/visitor/SQLASTOutputVisitor.java#L440" target="_blank" rel="noopener">SQLASTOutputVisitor.java</a> 的第 440 行。</p>
+<p>这段代码发生在格式化的最后步骤，拼接输出 SQL 的时候，具体逻辑是分析查询的数据库列，每当 column 数量为 5 的倍数时就调用 <code>println()</code> 方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// SQLASTOutputVisitor.java#L386</span></div><div class="line"><span class="keyword">if</span> (lineItemCount &gt;= selectListNumberOfLine) &#123;</div><div class="line">    lineItemCount = paramCount;</div><div class="line">    println();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>而 <code>println()</code> 的实现中，如果不开启 <code>OutputPrettyFormat</code> 特性，就会在当前 SQL 后增加一个空格。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// SQLASTOutputVisitor.java#L440</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">println</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!isPrettyFormat()) &#123;</div><div class="line">        print(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>目前尚不明确这行代码的意图，但就结果来看，最终得到的 SQL 并不符合强迫症的审美 : (，该问题我已提到官方 <a href="https://github.com/alibaba/druid/issues/2347" target="_blank" rel="noopener">ISSUE#2347</a>，期待官方给出答案。</p>
 
       
     </div>
@@ -536,7 +528,7 @@
     <strong>本文作者： </strong>Trang</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/" title="Spring Boot 的 Maven 项目原型">http://blog.trang.space/2017/08/11/Spring Boot 的 Maven 项目原型/</a>
+    <a href="http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/" title="Druid 中 SQL 格式化的 BUG">http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</li>
@@ -549,7 +541,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
+            <a href="/tags/druid/" rel="tag"># druid</a>
           
         </div>
       
@@ -562,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/13/Druid Spring Boot Starter/" rel="next" title="Druid Spring Boot Starter">
-                <i class="fa fa-chevron-left"></i> Druid Spring Boot Starter
+              <a href="/2018/02/26/禁止 MyBatis 打印 SQL 的功能/" rel="next" title="禁止 MyBatis 打印 SQL 的功能">
+                <i class="fa fa-chevron-left"></i> 禁止 MyBatis 打印 SQL 的功能
               </a>
             
           </div>
@@ -571,10 +563,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/26/禁止 MyBatis 打印 SQL 的功能/" rel="prev" title="禁止 MyBatis 打印 SQL 的功能">
-                禁止 MyBatis 打印 SQL 的功能 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -798,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要"><span class="nav-number">1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址"><span class="nav-number">2.</span> <span class="nav-text">地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ISSUE"><span class="nav-number">4.</span> <span class="nav-text">ISSUE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-Me"><span class="nav-number">5.</span> <span class="nav-text">About Me</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始-SQL"><span class="nav-number">1.</span> <span class="nav-text">原始 SQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认格式化"><span class="nav-number">2.</span> <span class="nav-text">默认格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仅大写格式化"><span class="nav-number">3.</span> <span class="nav-text">仅大写格式化</span></a></li></ol></div>
             
 
           </div>
