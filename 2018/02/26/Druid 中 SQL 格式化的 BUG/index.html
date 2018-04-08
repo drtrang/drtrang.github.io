@@ -9,20 +9,13 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
 
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -106,19 +99,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.0.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
@@ -133,7 +126,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '6.0.3',
+    version: '6.1.0',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
@@ -156,11 +149,7 @@
 
 
 
-  
-  <meta name="keywords" content="druid," />
-
-
-<meta name="description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
+  <meta name="description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
 <meta name="keywords" content="druid">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Druid 中 SQL 格式化的 BUG">
@@ -168,7 +157,7 @@
 <meta property="og:site_name" content="Trang&#39;s Blog">
 <meta property="og:description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-26T04:54:26.988Z">
+<meta property="og:updated_time" content="2018-02-26T09:38:01.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Druid 中 SQL 格式化的 BUG">
 <meta name="twitter:description" content="前段时间在写一个格式化 SQL 的拦截器（SqlFormatterInterceptor），其中格式化的部分借用了 Druid 现成的工具类 SQLUtils，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。">
@@ -189,6 +178,7 @@
     sidebar: "",
   };
 </script>
+
   <title>Druid 中 SQL 格式化的 BUG | Trang's Blog</title>
   
 
@@ -250,12 +240,14 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Trang's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -267,7 +259,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -282,28 +274,40 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
       
 
       
@@ -316,6 +320,30 @@
         </li>
       
     </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
   
 
   
@@ -358,6 +386,7 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -382,7 +411,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -443,24 +472,13 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/02/26/Druid 中 SQL 格式化的 BUG/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/26/Druid 中 SQL 格式化的 BUG/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/02/26/Druid 中 SQL 格式化的 BUG/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-          
-             <span id="/2018/02/26/Druid 中 SQL 格式化的 BUG/" class="leancloud_visitors" data-flag-title="Druid 中 SQL 格式化的 BUG">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -492,12 +510,12 @@
       
         <p>前段时间在写一个格式化 SQL 的拦截器（<a href="https://github.com/drtrang/spring-boot-autoconfigure/blob/master/src/main/java/com/github/trang/autoconfigure/mybatis/SqlFormatterInterceptor.java" target="_blank" rel="noopener">SqlFormatterInterceptor</a>），其中格式化的部分借用了 Druid 现成的工具类 <a href="https://github.com/drtrang/spring-boot-autoconfigure/blob/master/src/main/java/com/github/trang/autoconfigure/mybatis/SqlFormatterInterceptor.java#L64" target="_blank" rel="noopener">SQLUtils</a>，但在使用过程中发现输出的 SQL 中会出现多余的空格，复现场景如下。</p>
 <a id="more"></a>
-<h3 id="原始-SQL"><a href="#原始-SQL" class="headerlink" title="原始 SQL"></a>原始 SQL</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String sql = <span class="string">"SELECT id,task_id,task_source, housedel_code, del_type, office_address, company_code, brand, "</span> +</div><div class="line">                <span class="string">"class1_code, class2_code, class2_name, status, create_time, end_time, creator_ucid, creator_name, "</span> +</div><div class="line">                <span class="string">"org_code, prove_id, prove_time, audit_ucid, audit_name, audit_reject_reason, audit_content, "</span> +</div><div class="line">                <span class="string">"audit_time, pass_mode, sms_content, sms_time \r\n FROM "</span> +</div><div class="line">                <span class="string">"sh_true_house_task \r\n  WHERE office_address = 0 AND status = 0 ORDER     BY id DESC"</span>;</div></pre></td></tr></table></figure>
-<h3 id="默认格式化"><a href="#默认格式化" class="headerlink" title="默认格式化"></a>默认格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 格式化代码</span></div><div class="line">SQLUtils.formatMySql(sql)</div><div class="line"><span class="comment">// 输出结果</span></div><div class="line">SELECT id, task_id, task_source, housedel_code, del_type</div><div class="line">    , office_address, company_code, brand, class1_code, class2_code</div><div class="line">    , class2_name, status, create_time, end_time, creator_ucid</div><div class="line">    , creator_name, org_code, prove_id, prove_time, audit_ucid</div><div class="line">    , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode</div><div class="line">    , sms_content, sms_time</div><div class="line">FROM sh_true_house_task</div><div class="line">WHERE office_address = <span class="number">0</span></div><div class="line">    AND status = <span class="number">0</span></div><div class="line">ORDER BY id DESC</div></pre></td></tr></table></figure>
-<h3 id="仅大写格式化"><a href="#仅大写格式化" class="headerlink" title="仅大写格式化"></a>仅大写格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 格式化代码</span></div><div class="line">SQLUtils.formatMySql(sql, <span class="keyword">new</span> FormatOption(VisitorFeature.OutputUCase))</div><div class="line"><span class="comment">// 输出结果</span></div><div class="line">SELECT id, task_id, task_source, housedel_code, del_type , office_address, company_code, brand, class1_code, class2_code , class2_name, status, create_time, end_time, creator_ucid , creator_name, org_code, prove_id, prove_time, audit_ucid , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode , sms_content, sms_time FROM sh_true_house_task WHERE office_address = <span class="number">0</span> AND status = <span class="number">0</span> ORDER BY id DESC</div></pre></td></tr></table></figure>
+<h3 id="原始-SQL"><a href="#原始-SQL" class="headerlink" title="原始 SQL"></a>原始 SQL</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"SELECT id,task_id,task_source, housedel_code, del_type, office_address, company_code, brand, "</span> +</span><br><span class="line">                <span class="string">"class1_code, class2_code, class2_name, status, create_time, end_time, creator_ucid, creator_name, "</span> +</span><br><span class="line">                <span class="string">"org_code, prove_id, prove_time, audit_ucid, audit_name, audit_reject_reason, audit_content, "</span> +</span><br><span class="line">                <span class="string">"audit_time, pass_mode, sms_content, sms_time \r\n FROM "</span> +</span><br><span class="line">                <span class="string">"sh_true_house_task \r\n  WHERE office_address = 0 AND status = 0 ORDER     BY id DESC"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="默认格式化"><a href="#默认格式化" class="headerlink" title="默认格式化"></a>默认格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 格式化代码</span></span><br><span class="line">SQLUtils.formatMySql(sql)</span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line">SELECT id, task_id, task_source, housedel_code, del_type</span><br><span class="line">    , office_address, company_code, brand, class1_code, class2_code</span><br><span class="line">    , class2_name, status, create_time, end_time, creator_ucid</span><br><span class="line">    , creator_name, org_code, prove_id, prove_time, audit_ucid</span><br><span class="line">    , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode</span><br><span class="line">    , sms_content, sms_time</span><br><span class="line">FROM sh_true_house_task</span><br><span class="line">WHERE office_address = <span class="number">0</span></span><br><span class="line">    AND status = <span class="number">0</span></span><br><span class="line">ORDER BY id DESC</span><br></pre></td></tr></table></figure>
+<h3 id="仅大写格式化"><a href="#仅大写格式化" class="headerlink" title="仅大写格式化"></a>仅大写格式化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 格式化代码</span></span><br><span class="line">SQLUtils.formatMySql(sql, <span class="keyword">new</span> FormatOption(VisitorFeature.OutputUCase))</span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line">SELECT id, task_id, task_source, housedel_code, del_type , office_address, company_code, brand, class1_code, class2_code , class2_name, status, create_time, end_time, creator_ucid , creator_name, org_code, prove_id, prove_time, audit_ucid , audit_name, audit_reject_reason, audit_content, audit_time, pass_mode , sms_content, sms_time FROM sh_true_house_task WHERE office_address = <span class="number">0</span> AND status = <span class="number">0</span> ORDER BY id DESC</span><br></pre></td></tr></table></figure>
 <p>由上述结果可以看到，在仅使用 <code>OutputUCase</code> 配置时，输出的 SQL 中 <code>del_type</code>、<code>class2_code</code> 等字符后有多余的空格，经过仔细的翻看源码，问题最终定位在 <a href="https://github.com/alibaba/druid/blob/master/src/main/java/com/alibaba/druid/sql/visitor/SQLASTOutputVisitor.java#L440" target="_blank" rel="noopener">SQLASTOutputVisitor.java</a> 的第 440 行。</p>
-<p>这段代码发生在格式化的最后步骤，拼接输出 SQL 的时候，具体逻辑是分析查询的数据库列，每当 column 数量为 5 的倍数时就调用 <code>println()</code> 方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// SQLASTOutputVisitor.java#L386</span></div><div class="line"><span class="keyword">if</span> (lineItemCount &gt;= selectListNumberOfLine) &#123;</div><div class="line">    lineItemCount = paramCount;</div><div class="line">    println();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>而 <code>println()</code> 的实现中，如果不开启 <code>OutputPrettyFormat</code> 特性，就会在当前 SQL 后增加一个空格。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// SQLASTOutputVisitor.java#L440</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">println</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!isPrettyFormat()) &#123;</div><div class="line">        print(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这段代码发生在格式化的最后步骤，拼接输出 SQL 的时候，具体逻辑是分析查询的数据库列，每当 column 数量为 5 的倍数时就调用 <code>println()</code> 方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SQLASTOutputVisitor.java#L386</span></span><br><span class="line"><span class="keyword">if</span> (lineItemCount &gt;= selectListNumberOfLine) &#123;</span><br><span class="line">    lineItemCount = paramCount;</span><br><span class="line">    println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而 <code>println()</code> 的实现中，如果不开启 <code>OutputPrettyFormat</code> 特性，就会在当前 SQL 后增加一个空格。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SQLASTOutputVisitor.java#L440</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">println</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!isPrettyFormat()) &#123;</span><br><span class="line">        print(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>目前尚不明确这行代码的意图，但就结果来看，最终得到的 SQL 并不符合强迫症的审美 : (，该问题我已提到官方 <a href="https://github.com/alibaba/druid/issues/2347" target="_blank" rel="noopener">ISSUE#2347</a>，期待官方给出答案。</p>
 
       
@@ -520,6 +538,30 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Trang 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
       <div>
@@ -531,7 +573,7 @@
     <a href="http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/" title="Druid 中 SQL 格式化的 BUG">http://blog.trang.space/2018/02/26/Druid 中 SQL 格式化的 BUG/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -629,7 +671,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
+                src="/images/avatar.png"
                 alt="Trang" />
             
               <p class="site-author-name" itemprop="name">Trang</p>
@@ -807,7 +849,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate"> 
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Trang</span>
@@ -923,25 +965,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
@@ -1323,113 +1365,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("JAw0LdecDTBGqxPWJd9u501d-gzGzoHsz", "y5UhLNdxJbQGKUTAbOyzLhQG");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 

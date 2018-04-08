@@ -9,20 +9,13 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
 
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -106,19 +99,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.1.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.0.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.3" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.1.0" color="#222">
 
 
 
@@ -133,7 +126,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '6.0.3',
+    version: '6.1.0',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
@@ -156,11 +149,7 @@
 
 
 
-  
-  <meta name="keywords" content="MyBatis," />
-
-
-<meta name="description" content="MyBatis 数据库加密工具">
+  <meta name="description" content="MyBatis 数据库加密工具">
 <meta name="keywords" content="MyBatis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis Type Handlers for Encrypt">
@@ -189,6 +178,7 @@
     sidebar: "",
   };
 </script>
+
   <title>MyBatis Type Handlers for Encrypt | Trang's Blog</title>
   
 
@@ -250,12 +240,14 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Trang's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -267,7 +259,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -282,28 +274,40 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
       
 
       
@@ -316,6 +320,30 @@
         </li>
       
     </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
   
 
   
@@ -358,6 +386,7 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -382,7 +411,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -443,24 +472,13 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/17/MyBatis Type Handlers for Encrypt/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/17/MyBatis Type Handlers for Encrypt/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/04/17/MyBatis Type Handlers for Encrypt/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-          
-             <span id="/2017/04/17/MyBatis Type Handlers for Encrypt/" class="leancloud_visitors" data-flag-title="MyBatis Type Handlers for Encrypt">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -496,19 +514,19 @@
 <p><code>typehandlers-encrypt</code> 项目在这种背景下诞生，用户使用时无需更改业务代码，仅需少量配置即可实现数据库指定字段的加解密操作，大大减小了对用户的影响。</p>
 <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><code>typehandlers-encrypt</code> 基于 MyBatis 的 TypeHandler 开发，通过 TypeHandler 可以在 JavaType 和 JdbcType 中互相转换的特性，拦截 JavaType 为 <code>com.github.trang.typehandlers.alias.Encrypt</code> 的 SQL，在预处理语句（PreparedStatement）中设置参数时自动加密，并在结果集（ResultSet）中取值时自动解密。</p>
 <p>注：由于依赖 MyBatis，使用时需要将 <code>EncryptTypeHandler</code> 和 <code>Encrypt</code> 注册到 MyBatis，否则无法生效，注册方式见 <strong>声明 EncryptTypeHandler</strong>。</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>typehandlers-encrypt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="声明-EncryptTypeHandler"><a href="#声明-EncryptTypeHandler" class="headerlink" title="声明 EncryptTypeHandler"></a>声明 EncryptTypeHandler</h3><h4 id="1-单独使用-MyBatis"><a href="#1-单独使用-MyBatis" class="headerlink" title="1. 单独使用 MyBatis"></a>1. 单独使用 MyBatis</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- mybatis-config.xml --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.alias"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">typeHandlers</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.type"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">typeHandlers</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="2-与-Spring-结合"><a href="#2-与-Spring-结合" class="headerlink" title="2. 与 Spring 结合"></a>2. 与 Spring 结合</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="function"><span class="keyword">public</span> SqlSessionFactory <span class="title">sqlSessionFactory</span><span class="params">(Configuration config)</span> </span>&#123;</div><div class="line">    SqlSessionFactoryBean factory = <span class="keyword">new</span> SqlSessionFactoryBean();</div><div class="line">    factory.setTypeAliasesPackage(<span class="string">"com.github.trang.typehandlers.alias"</span>);</div><div class="line">    factory.setTypeHandlersPackage(<span class="string">"com.github.trang.typehandlers.type"</span>);</div><div class="line">    <span class="keyword">return</span> factory.getObject();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="3-与-SpringBoot-结合"><a href="#3-与-SpringBoot-结合" class="headerlink" title="3. 与 SpringBoot 结合"></a>3. 与 SpringBoot 结合</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##application.yml</span></div><div class="line"><span class="attr">mybatis:</span></div><div class="line"><span class="attr">    type-aliases-package:</span> <span class="string">com.github.trang.typehandlers.alias</span></div><div class="line"><span class="attr">    type-handlers-package:</span> <span class="string">com.github.trang.typehandlers.type</span></div></pre></td></tr></table></figure>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.drtrang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>typehandlers-encrypt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="声明-EncryptTypeHandler"><a href="#声明-EncryptTypeHandler" class="headerlink" title="声明 EncryptTypeHandler"></a>声明 EncryptTypeHandler</h3><h4 id="1-单独使用-MyBatis"><a href="#1-单独使用-MyBatis" class="headerlink" title="1. 单独使用 MyBatis"></a>1. 单独使用 MyBatis</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- mybatis-config.xml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.alias"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">typeHandlers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.github.trang.typehandlers.type"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">typeHandlers</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-与-Spring-结合"><a href="#2-与-Spring-结合" class="headerlink" title="2. 与 Spring 结合"></a>2. 与 Spring 结合</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> SqlSessionFactory <span class="title">sqlSessionFactory</span><span class="params">(Configuration config)</span> </span>&#123;</span><br><span class="line">    SqlSessionFactoryBean factory = <span class="keyword">new</span> SqlSessionFactoryBean();</span><br><span class="line">    factory.setTypeAliasesPackage(<span class="string">"com.github.trang.typehandlers.alias"</span>);</span><br><span class="line">    factory.setTypeHandlersPackage(<span class="string">"com.github.trang.typehandlers.type"</span>);</span><br><span class="line">    <span class="keyword">return</span> factory.getObject();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-与-SpringBoot-结合"><a href="#3-与-SpringBoot-结合" class="headerlink" title="3. 与 SpringBoot 结合"></a>3. 与 SpringBoot 结合</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##application.yml</span></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line"><span class="attr">    type-aliases-package:</span> <span class="string">com.github.trang.typehandlers.alias</span></span><br><span class="line"><span class="attr">    type-handlers-package:</span> <span class="string">com.github.trang.typehandlers.type</span></span><br></pre></td></tr></table></figure>
 <p>注：以上配置方式<strong>任选其一</strong>即可，请根据实际情况选择。</p>
-<h3 id="使用-EncryptTypeHandler"><a href="#使用-EncryptTypeHandler" class="headerlink" title="使用 EncryptTypeHandler"></a>使用 EncryptTypeHandler</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- select --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">javaType</span>=<span class="string">"string"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"username"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">javaType</span>=<span class="string">"encrypt"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"password"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- insert --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    insert into user (id, username, password)</div><div class="line">    values (#&#123;id,jdbcType=BIGINT&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- update --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"update"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></div><div class="line">    update user set password=#&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125; where id=#&#123;id&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="使用-EncryptTypeHandler"><a href="#使用-EncryptTypeHandler" class="headerlink" title="使用 EncryptTypeHandler"></a>使用 EncryptTypeHandler</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- select --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">javaType</span>=<span class="string">"string"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"username"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">javaType</span>=<span class="string">"encrypt"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"password"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- insert --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    insert into user (id, username, password)</span><br><span class="line">    values (#&#123;id,jdbcType=BIGINT&#125;, #&#123;username,jdbcType=VARCHAR&#125;, #&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- update --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"update"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    update user set password=#&#123;password, javaType=encrypt, jdbcType=VARCHAR&#125; where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p><code>typehandlers-encrypt</code> 内置了 16 位长度密钥与 AES 加密算法，支持开箱即用，但用户也可以自定义密钥和加密算法，只需要在配置文件中声明对应的属性即可。需要注意，<strong>两者同时配置时，要声明在同一文件里</strong>。</p>
-<p>配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
+<p>配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">encrypt.private.key=xxx</span><br><span class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</span><br></pre></td></tr></table></figure></p>
 <h3 id="配置文件查找"><a href="#配置文件查找" class="headerlink" title="配置文件查找"></a>配置文件查找</h3><p>方式一：项目启动时，会在项目的 Classpath 中依次查找名称为 <code>encrypt</code>、<code>properties/config-common</code>、<code>properties/config</code>、<code>config</code>、<code>application</code> 的 Properties 文件，直到文件存在且文件中包含名称为 <code>encrypt.private.key</code> 的属性时停止。</p>
 <p>方式二：如果项目中不存在以上文件，且不想单独新增，也可以在项目启动时调用 <code>ConfigUtil.bundleNames(&quot;xxx&quot;)</code> 来指定要读取的文件，这时只会从用户给定的文件中查找。</p>
 <p><strong>当没有查找到相应配置时，项目会使用内置的配置。</strong></p>
-<h3 id="自定义密钥"><a href="#自定义密钥" class="headerlink" title="自定义密钥"></a>自定义密钥</h3><p><code>typehandlers-encrypt</code> 支持自定义密钥，只需在配置文件中声明即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.private.key=xxx</div></pre></td></tr></table></figure></p>
-<h3 id="自定义加密算法"><a href="#自定义加密算法" class="headerlink" title="自定义加密算法"></a>自定义加密算法</h3><p><code>typehandlers-encrypt</code> 默认的加密算法是 <strong>AES 对称加密</strong>，如果默认算法不满足实际需求，用户可以自己实现 <code>com.github.trang.typehandlers.crypt.Crypt</code> 接口，并在配置文件中声明实现类的全路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</div></pre></td></tr></table></figure></p>
+<h3 id="自定义密钥"><a href="#自定义密钥" class="headerlink" title="自定义密钥"></a>自定义密钥</h3><p><code>typehandlers-encrypt</code> 支持自定义密钥，只需在配置文件中声明即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encrypt.private.key=xxx</span><br></pre></td></tr></table></figure></p>
+<h3 id="自定义加密算法"><a href="#自定义加密算法" class="headerlink" title="自定义加密算法"></a>自定义加密算法</h3><p><code>typehandlers-encrypt</code> 默认的加密算法是 <strong>AES 对称加密</strong>，如果默认算法不满足实际需求，用户可以自己实现 <code>com.github.trang.typehandlers.crypt.Crypt</code> 接口，并在配置文件中声明实现类的全路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encrypt.class.name=com.github.trang.typehandlers.crypt.SimpleEncrypt</span><br></pre></td></tr></table></figure></p>
 <h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>目前项目已开源，并上传到 <a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="noopener">Github</a>，大家感兴趣的话可以阅读源码。<a href="https://github.com/drtrang/typehandlers-encrypt" target="_blank" rel="noopener">Github</a> 中有配套的 Demo 演示 <a href="https://github.com/drtrang/typehandlers-encrypt-demo" target="_blank" rel="noopener"><code>typehandlers-encrypt-demo</code></a>，其中包括 <code>typehandlers-encrypt</code> 完整的使用方式，可以作为参考。</p>
 <h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>QQ：349096849<br>Email：donghao.l@hotmail.com<br>Blog：<a href="http://blog.trang.space">Trang’s Blog</a></p>
 <blockquote>
@@ -539,6 +557,30 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Trang 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
       <div>
@@ -550,7 +592,7 @@
     <a href="http://blog.trang.space/2017/04/17/MyBatis Type Handlers for Encrypt/" title="MyBatis Type Handlers for Encrypt">http://blog.trang.space/2017/04/17/MyBatis Type Handlers for Encrypt/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</li>
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
 </ul>
 
       </div>
@@ -652,7 +694,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
+                src="/images/avatar.png"
                 alt="Trang" />
             
               <p class="site-author-name" itemprop="name">Trang</p>
@@ -830,7 +872,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate"> 
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Trang</span>
@@ -946,25 +988,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.3"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.1.0"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.3"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.1.0"></script>
 
 
 
@@ -1346,113 +1388,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("JAw0LdecDTBGqxPWJd9u501d-gzGzoHsz", "y5UhLNdxJbQGKUTAbOyzLhQG");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
