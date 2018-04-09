@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>http://blog.trang.space/2017/03/21/Copiers/</loc>
+    <lastmod>2018-04-08T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Copiers</title>
+        <pubTime>2017-03-20T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具控" url="http://blog.trang.space/categories/%E5%B7%A5%E5%85%B7%E6%8E%A7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://blog.trang.space/2018/02/26/Druid%20%E4%B8%AD%20SQL%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%20BUG/</loc>
@@ -84,26 +106,6 @@
            
              
               <breadCrumb title="最佳实践" url="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.trang.space/2017/03/21/Copiers/</loc>
-    <lastmod>2017-06-23T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Copiers</title>
-        <pubTime>2017-03-20T16:00:00.000Z</pubTime>
-        
-        <tag>Tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java工具" url="http://blog.trang.space/categories/Java%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>
