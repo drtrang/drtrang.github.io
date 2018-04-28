@@ -103,7 +103,9 @@
       <category term="最佳实践" scheme="http://blog.trang.space/categories/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     
     
-      <category term="Spring Boot" scheme="http://blog.trang.space/tags/Spring-Boot/"/>
+      <category term="spring-boot" scheme="http://blog.trang.space/tags/spring-boot/"/>
+    
+      <category term="java" scheme="http://blog.trang.space/tags/java/"/>
     
   </entry>
   
