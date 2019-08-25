@@ -111,7 +111,7 @@
 <link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.bak.png?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.3.0">
@@ -170,7 +170,7 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/13851701/36660347-d03ab172-1b12-11e8-9cc2-95b264b0d3a6.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/13851701/36661102-4d472e5a-1b15-11e8-91e2-e0c7481e4ad0.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/13851701/36660544-7a8d0652-1b13-11e8-86e0-d94726097ae4.png">
-<meta property="og:updated_time" content="2018-08-02T07:33:21.200Z">
+<meta property="og:updated_time" content="2019-08-25T03:27:13.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禁止 MyBatis 打印 SQL 的功能">
 <meta name="twitter:description" content="背景昨天在整理日志的时候，打算将每次执行的 SQL 打印出来（开发环境），便于快速定位问题。 在已知的两种打印方式中，MyBatis 会将预处理 SQL、参数、返回结果分别打印，而 Druid 可以更细致的对打印内容进行自定义，并且可以直接打印可执行 SQL，于是决定使用 Druid 来打印 SQL。">
@@ -200,6 +200,16 @@
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?902a46a1785e4edde6f4fe3c05d320ec";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -433,6 +443,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-25 11:27:13" itemprop="dateModified" datetime="2019-08-25T11:27:13+08:00">2019-08-25</time>
+              
+            
           </span>
 
           
@@ -471,18 +497,14 @@
 
           
           
-             <span id="/2018/02/26/禁止 MyBatis 打印 SQL 的功能/" class="leancloud_visitors" data-flag-title="禁止 MyBatis 打印 SQL 的功能">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -883,6 +905,24 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -1003,7 +1043,7 @@
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail';
+    var guest = 'nick,mail,link';
     guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
@@ -1014,10 +1054,10 @@
         appId: 'JAw0LdecDTBGqxPWJd9u501d-gzGzoHsz',
         appKey: 'y5UhLNdxJbQGKUTAbOyzLhQG',
         placeholder: 'System.out.print();',
-        avatar:'identicon',
+        avatar:'mm',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: true
+        visitor: false
     });
   </script>
 
@@ -1075,19 +1115,6 @@
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
       
-        // ref: https://github.com/ForbesLindesay/unescape-html
-        var unescapeHtml = function(html) {
-          return String(html)
-            .replace(/&quot;/g, '"')
-            .replace(/&#39;/g, '\'')
-            .replace(/&#x3A;/g, ':')
-            // replace all the other &#x; chars
-            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-            .replace(/&amp;/g, '&');
-        };
-      
 
       $.ajax({
         url: path,
@@ -1122,8 +1149,6 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                content = unescapeHtml(content);
                 
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
@@ -1369,6 +1394,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -1376,11 +1416,6 @@
   
 
   
-  
-  
-  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script type="text/javascript">pangu.spacingPage();</script>
-
 
   
 
