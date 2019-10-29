@@ -171,7 +171,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">9</span></a>
 
   </li>
         
@@ -184,7 +184,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
 
   </li>
         
@@ -246,6 +246,119 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2019/10/29/Travis CI 构建失败/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Trang">
+      <meta itemprop="description" content="基础架构，热衷造轮子，重度工具控">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trang's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/29/Travis CI 构建失败/" class="post-title-link" itemprop="url">Travis CI 构建失败</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-29 20:49:00" itemprop="dateCreated datePublished" datetime="2019-10-29T20:49:00+08:00">2019-10-29</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/疑难杂症/" itemprop="url" rel="index"><span itemprop="name">疑难杂症</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span id="/2019/10/29/Travis CI 构建失败/" class="post-meta-item leancloud_visitors" data-flag-title="Travis CI 构建失败">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>很长时间没有更新过 Github Project，今天小幅更改后发现 Travis CI 构建失败，错误提示如下：<br><img src="https://user-images.githubusercontent.com/13851701/67768811-4582a280-fa8e-11e9-94d2-c2d4299dbd99.png"></p>
+<p>初步怀疑是 os 或者 jdk 版本问题，根据错误提示 google 一圈后在 Travis CI 社区网站找到了相关的<a href="https://travis-ci.community/t/error-installing-oraclejdk8-expected-feature-release-number-in-range-of-9-to-14-but-got-8/3766/4" target="_blank" rel="noopener">问题讨论</a>，但是貌似也没人解释明白，只是提供了解决方案。实测 SomioNaArashi 的方案是可行的：<br><img src="https://user-images.githubusercontent.com/13851701/67770024-8085d580-fa90-11e9-8f27-a49a35bdd277.png" height="55%" width="55%"></p>
+<p>顺带附赠一个构建 JDK11 Project 的方案：<a href="https://www.deps.co/guides/travis-ci-latest-java/" target="_blank" rel="noopener">Building Java 11+ projects on Travis CI</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/10/29/Travis CI 构建失败/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
       
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -668,117 +781,6 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2017/07/13/Druid Spring Boot Starter/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.trang.space/2017/04/17/MyBatis Type Handlers for Encrypt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Trang">
-      <meta itemprop="description" content="基础架构，热衷造轮子，重度工具控">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Trang's Blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/04/17/MyBatis Type Handlers for Encrypt/" class="post-title-link" itemprop="url">MyBatis Type Handlers for Encrypt</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-04-17 00:00:00" itemprop="dateCreated datePublished" datetime="2017-04-17T00:00:00+08:00">2017-04-17</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/最佳实践/" itemprop="url" rel="index"><span itemprop="name">最佳实践</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/04/17/MyBatis Type Handlers for Encrypt/" class="post-meta-item leancloud_visitors" data-flag-title="MyBatis Type Handlers for Encrypt">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          MyBatis 数据库加密工具
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/04/17/MyBatis Type Handlers for Encrypt/">
                 阅读全文 &raquo;
               </a>
             </div>

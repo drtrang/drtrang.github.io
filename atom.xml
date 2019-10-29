@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.trang.space/"/>
-  <updated>2019-08-25T03:27:13.289Z</updated>
+  <updated>2019-10-29T13:27:36.336Z</updated>
   <id>http://blog.trang.space/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Travis CI 构建失败</title>
+    <link href="http://blog.trang.space/2019/10/29/Travis%20CI%20%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5/"/>
+    <id>http://blog.trang.space/2019/10/29/Travis CI 构建失败/</id>
+    <published>2019-10-29T12:49:00.000Z</published>
+    <updated>2019-10-29T13:27:36.336Z</updated>
+    
+    <content type="html"><![CDATA[<p>很长时间没有更新过 Github Project，今天小幅更改后发现 Travis CI 构建失败，错误提示如下：<br><img src="https://user-images.githubusercontent.com/13851701/67768811-4582a280-fa8e-11e9-94d2-c2d4299dbd99.png"></p><p>初步怀疑是 os 或者 jdk 版本问题，根据错误提示 google 一圈后在 Travis CI 社区网站找到了相关的<a href="https://travis-ci.community/t/error-installing-oraclejdk8-expected-feature-release-number-in-range-of-9-to-14-but-got-8/3766/4" target="_blank" rel="noopener">问题讨论</a>，但是貌似也没人解释明白，只是提供了解决方案。实测 SomioNaArashi 的方案是可行的：<br><img src="https://user-images.githubusercontent.com/13851701/67770024-8085d580-fa90-11e9-8f27-a49a35bdd277.png" height="55%" width="55%"></p><p>顺带附赠一个构建 JDK11 Project 的方案：<a href="https://www.deps.co/guides/travis-ci-latest-java/" target="_blank" rel="noopener">Building Java 11+ projects on Travis CI</a></p><a id="more"></a><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li>构建失败链接：<a href="https://www.travis-ci.org/drtrang/druid-spring-boot/builds/604401869" target="_blank" rel="noopener">https://www.travis-ci.org/drtrang/druid-spring-boot/builds/604401869</a></li><li>构建成功链接：<a href="https://www.travis-ci.org/drtrang/druid-spring-boot/builds/604420886" target="_blank" rel="noopener">https://www.travis-ci.org/drtrang/druid-spring-boot/builds/604420886</a></li><li>社区讨论：<a href="https://travis-ci.community/t/error-installing-oraclejdk8-expected-feature-release-number-in-range-of-9-to-14-but-got-8/3766" target="_blank" rel="noopener">https://travis-ci.community/t/error-installing-oraclejdk8-expected-feature-release-number-in-range-of-9-to-14-but-got-8/3766</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很长时间没有更新过 Github Project，今天小幅更改后发现 Travis CI 构建失败，错误提示如下：&lt;br&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/13851701/67768811-4582a280-fa8e-11e9-94d2-c2d4299dbd99.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;初步怀疑是 os 或者 jdk 版本问题，根据错误提示 google 一圈后在 Travis CI 社区网站找到了相关的&lt;a href=&quot;https://travis-ci.community/t/error-installing-oraclejdk8-expected-feature-release-number-in-range-of-9-to-14-but-got-8/3766/4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;问题讨论&lt;/a&gt;，但是貌似也没人解释明白，只是提供了解决方案。实测 SomioNaArashi 的方案是可行的：&lt;br&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/13851701/67770024-8085d580-fa90-11e9-8f27-a49a35bdd277.png&quot; height=&quot;55%&quot; width=&quot;55%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;顺带附赠一个构建 JDK11 Project 的方案：&lt;a href=&quot;https://www.deps.co/guides/travis-ci-latest-java/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Building Java 11+ projects on Travis CI&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="疑难杂症" scheme="http://blog.trang.space/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Druid 中 SQL 格式化的 BUG</title>
